@@ -1,0 +1,17 @@
+﻿import pg from "pg";
+import { config } from "dotenv";
+config({quiet:true});
+const url = process.env.DATABASE_URL.replace(/\/[^/]+$/, "/erp_system1_test");
+const c = new pg.Client({connectionString: url});
+await c.connect();
+const q = async (s,p) => (await c.query(s,p)).rows;
+await c.query("DELETE FROM inventory_items WHERE ingredient_id IN (SELECT id FROM ingredients WHERE name = 'REPRO-ITEM')");
+await c.query("DELETE FROM ingredients WHERE name = 'REPRO-ITEM'");
+await c.query("DELETE FROM warehouses WHERE name = 'REPRO-WH'");
+await c.query("DELETE FROM customers WHERE name = 'REPRO-CUST'");
+const wh = await q("INSERT INTO warehouses (name, type, activity, status, allow_negative_stock) VALUES ('REPRO-WH','branch','factory_raw','active',false) RETURNING id");
+const ing = await q("INSERT INTO ingredients (name, unit, cost, current_stock, is_active, is_stock_item, avg_cost) VALUES ('REPRO-ITEM','قطعة',5,100,true,1,5) RETURNING id");
+await c.query("INSERT INTO inventory_items (warehouse_id, ingredient_id, quantity, unit_cost, avg_cost, cost) VALUES ($1,$2,100,5,5,5)", [wh[0].id, ing[0].id]);
+const cust = await q("INSERT INTO customers (name, phone, total_orders, total_spent) VALUES ('REPRO-CUST','REPRO-0001',0,0) RETURNING id");
+console.log(JSON.stringify({warehouse_id: wh[0].id, ingredient_id: ing[0].id, customer_id: cust[0].id}));
+await c.end();

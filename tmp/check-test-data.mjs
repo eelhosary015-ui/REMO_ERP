@@ -1,0 +1,13 @@
+﻿import pg from "pg";
+import { config } from "dotenv";
+config({quiet:true});
+const url = process.env.DATABASE_URL.replace(/\/[^/]+$/, "/erp_system1_test");
+const c = new pg.Client({connectionString: url});
+await c.connect();
+const q = async (s) => (await c.query(s)).rows;
+console.log("warehouses:", await q("select id,name from warehouses order by id limit 5"));
+console.log("ingredients:", await q("select id,name,current_stock,cost,avg_cost from ingredients order by id limit 8"));
+console.log("inventory_items:", await q("select id,warehouse_id,ingredient_id,quantity from inventory_items order by id limit 8"));
+console.log("customers:", await q("select id,name from customers order by id limit 5"));
+console.log("sales_products:", await q("select id,name,ingredient_id from sales_products order by id limit 5").catch(()=>"n/a"));
+await c.end();

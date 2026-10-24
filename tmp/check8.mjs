@@ -1,0 +1,10 @@
+﻿import pg from "pg";
+import { config } from "dotenv";
+config({quiet:true});
+const c = new pg.Client({connectionString: process.env.DATABASE_URL});
+await c.connect();
+const t = await c.query("select table_name from information_schema.tables where table_schema='public' and (table_name like 'sales_%' or table_name like 'purchase%') order by 1");
+console.log(t.rows.map(r=>r.table_name).join("\n"));
+const cols = await c.query("select column_name from information_schema.columns where table_name='sales_invoices' order by ordinal_position");
+console.log("sales_invoices:", cols.rows.map(r=>r.column_name).join(", "));
+await c.end();

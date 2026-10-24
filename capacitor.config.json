@@ -1,0 +1,34 @@
+{
+  "appId": "com.remo_pro.pro",
+  "appName": "Remo Pro",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https",
+    "cleartext": true,
+    "allowNavigation": [
+      "*.z.ai",
+      "*.fcapp.run",
+      "*.run.app",
+      "*.googleapis.com",
+      "*.gstatic.com",
+      "localhost",
+      "127.0.0.1",
+      "192.168.*.*",
+      "10.*.*.*",
+      "172.*.*.*"
+    ]
+  },
+  "android": {
+    "allowMixedContent": true,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": true,
+    "backgroundColor": "#0f172a"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 1500,
+      "backgroundColor": "#0f172a",
+      "showSpinner": false
+    }
+  }
+}

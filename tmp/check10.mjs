@@ -1,0 +1,16 @@
+﻿import pg from "pg";
+import { config } from "dotenv";
+config({quiet:true});
+const c = new pg.Client({connectionString: process.env.DATABASE_URL});
+await c.connect();
+const q = async (s) => (await c.query(s)).rows;
+console.log("treasury_accounts:", await q("select count(*)::int n, coalesce(sum(current_balance),0)::numeric s from treasury_accounts"));
+console.log("bank_accounts:", await q("select count(*)::int n, coalesce(sum(balance),0)::numeric s from bank_accounts"));
+console.log("safes:", await q("select count(*)::int n, coalesce(sum(balance),0)::numeric s from safes"));
+console.log("suppliers:", await q("select count(*)::int n, coalesce(sum(balance),0)::numeric s from suppliers"));
+console.log("customers:", await q("select count(*)::int n from customers"));
+console.log("sales_invoices:", await q("select count(*)::int n from sales_invoices"));
+console.log("sales unpaid:", await q("select coalesce(sum(net_amount-coalesce(paid_amount,0)),0)::numeric s from sales_invoices where coalesce(status,'') not in ('cancelled','canceled')"));
+console.log("GL cash acct 8:", await q("select coalesce(sum(ji.debit-ji.credit),0)::numeric s from journal_items ji join journal_entries je on je.id=ji.journal_entry_id where ji.account_id=8 and je.status='posted'"));
+console.log("GL all:", await q("select coalesce(sum(ji.debit),0)::numeric d, coalesce(sum(ji.credit),0)::numeric c from journal_items ji join journal_entries je on je.id=ji.journal_entry_id where je.status='posted'"));
+await c.end();

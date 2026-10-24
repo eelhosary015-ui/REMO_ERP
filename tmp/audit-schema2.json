@@ -1,0 +1,1021 @@
+{
+  "missingTables": [
+    {
+      "file": "modules\\accounting\\accounting_api.routes.ts",
+      "line": 71,
+      "table": "tree",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\accounting\\accounting_api.routes.ts",
+      "line": 71,
+      "table": "gl",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\accounting\\accounting_api.routes.ts",
+      "line": 71,
+      "table": "unposted",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\accounting\\accounting_api.routes.ts",
+      "line": 71,
+      "table": "totals",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\accounting\\accounting_api.routes.ts",
+      "line": 1094,
+      "table": "movements",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\accounting\\accounting_api.routes.ts",
+      "line": 2551,
+      "table": "current_date",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\accounting\\services\\treasury-voucher.service.ts",
+      "line": 17,
+      "table": "created_at",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\accounting\\treasury_api.routes.ts",
+      "line": 2162,
+      "table": "created_at",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\accounting\\treasury_api.routes.ts",
+      "line": 2933,
+      "table": "created_at",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\accounts\\events\\account.events.ts",
+      "line": 183,
+      "table": "created_at",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\accounts\\services\\auto-posting.service.ts",
+      "line": 364,
+      "table": "length",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\costs\\repositories\\cost.repository.ts",
+      "line": 969,
+      "table": "prod_list",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\costs\\repositories\\cost.repository.ts",
+      "line": 969,
+      "table": "ing_list",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\costs\\repositories\\cost.repository.ts",
+      "line": 969,
+      "table": "standalone_boms",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\costs\\repositories\\cost.repository.ts",
+      "line": 969,
+      "table": "standalone_recipes",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\costs\\services\\cost.service.ts",
+      "line": 476,
+      "table": "char_length",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\enterprise\\services\\autoPosting.service.ts",
+      "line": 45,
+      "table": "length",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\hr\\hr_api.routes.ts",
+      "line": 1172,
+      "table": "a.date",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\hr\\hr_api.routes.ts",
+      "line": 1204,
+      "table": "date",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\hr\\hr_api.routes.ts",
+      "line": 1209,
+      "table": "date",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\hr\\hr_api.routes.ts",
+      "line": 1214,
+      "table": "date",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\hr\\hr_api.routes.ts",
+      "line": 1219,
+      "table": "date",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\restaurant\\restaurant_api.routes.ts",
+      "line": 469,
+      "table": "customer_ratings",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\security\\repositories\\security.repository.ts",
+      "line": 30,
+      "table": "security_logs",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\system\\services\\schema-guard.service.ts",
+      "line": 381,
+      "table": "greatest",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\warehouses\\routes\\adjustments.routes.ts",
+      "line": 176,
+      "table": "stock_balances",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\warehouses\\routes\\adjustments.routes.ts",
+      "line": 181,
+      "table": "stock_balances",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "modules\\warehouses\\routes\\adjustments.routes.ts",
+      "line": 187,
+      "table": "stock_balances",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\warehouses\\routes\\enterprise_inventory.routes.ts",
+      "line": 5065,
+      "table": "stock_batches",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\warehouses\\routes\\wastage.routes.ts",
+      "line": 164,
+      "table": "stock_balances",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\warehouses\\routes\\wastage.routes.ts",
+      "line": 169,
+      "table": "stock_balances",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "modules\\warehouses\\routes\\wastage.routes.ts",
+      "line": 175,
+      "table": "stock_balances",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 41,
+      "table": "inventory_notifications",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 46,
+      "table": "inventory_notifications",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 62,
+      "table": "stock_batches",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 73,
+      "table": "stock_batches",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 75,
+      "table": "inventory_notifications",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 84,
+      "table": "inventory_notifications",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 455,
+      "table": "stock_batches",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 456,
+      "table": "inventory_notifications",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 793,
+      "table": "stock_batches",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 802,
+      "table": "stock_batches",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 1850,
+      "table": "stock_batches",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 1879,
+      "table": "stock_batches",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 1891,
+      "table": "stock_batches",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 1900,
+      "table": "stock_batches",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 1912,
+      "table": "inventory_notifications",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 1926,
+      "table": "inventory_notifications",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 1931,
+      "table": "inventory_notifications",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 1936,
+      "table": "inventory_notifications",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 1945,
+      "table": "supplier_ratings",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 1966,
+      "table": "supplier_ratings",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 1975,
+      "table": "supplier_ratings",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "scripts\\repair-misnamed-sales-invoice-items.ts",
+      "line": 36,
+      "table": "invoice_lines",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "scripts\\repair-misnamed-sales-invoice-items.ts",
+      "line": 36,
+      "table": "invoice_counts",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "scripts\\repair-misnamed-sales-invoice-items.ts",
+      "line": 36,
+      "table": "order_lines",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "server-db-init.ts",
+      "line": 2345,
+      "table": "aggregated",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "tests\\behavior\\operating-cost-save.test.ts",
+      "line": 385,
+      "table": "char_length",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "tests\\behavior\\sales-invoice.test.ts",
+      "line": 635,
+      "table": "ingredients_id_seq",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "tests\\behavior\\sales-invoice.test.ts",
+      "line": 647,
+      "table": "sales_products_id_seq",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "tests\\sales-returns-acceptance.test.ts",
+      "line": 275,
+      "table": "journal_entry_lines",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "tools\\manual-tests\\test-production-costing.ts",
+      "line": 354,
+      "table": "journal_entry_items",
+      "ctx": "FROM/JOIN"
+    },
+    {
+      "file": "tools\\manual-tests\\test-production-costing.ts",
+      "line": 379,
+      "table": "journal_entry_items",
+      "ctx": "FROM/JOIN"
+    }
+  ],
+  "missingColumns": [
+    {
+      "file": "modules\\accounting\\accounting_api.routes.ts",
+      "line": 3246,
+      "table": "bank_beneficiaries",
+      "column": "code",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\accounting\\accounting_api.routes.ts",
+      "line": 3246,
+      "table": "bank_beneficiaries",
+      "column": "bank_id",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\accounting\\accounting_api.routes.ts",
+      "line": 3246,
+      "table": "bank_beneficiaries",
+      "column": "branch_id",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\accounting\\accounting_api.routes.ts",
+      "line": 3246,
+      "table": "bank_beneficiaries",
+      "column": "currency_code",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\accounting\\accounting_api.routes.ts",
+      "line": 3246,
+      "table": "bank_beneficiaries",
+      "column": "supplier_id",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\accounting\\accounting_api.routes.ts",
+      "line": 3246,
+      "table": "bank_beneficiaries",
+      "column": "customer_id",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\accounting\\accounting_api.routes.ts",
+      "line": 3246,
+      "table": "bank_beneficiaries",
+      "column": "phone",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\accounting\\accounting_api.routes.ts",
+      "line": 3246,
+      "table": "bank_beneficiaries",
+      "column": "email",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\accounting\\accounting_api.routes.ts",
+      "line": 3246,
+      "table": "bank_beneficiaries",
+      "column": "address",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\accounting\\accounting_api.routes.ts",
+      "line": 3246,
+      "table": "bank_beneficiaries",
+      "column": "created_by",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\accounting\\accounting_api.routes.ts",
+      "line": 3268,
+      "table": "bank_statements",
+      "column": "statement_no",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\accounting\\accounting_api.routes.ts",
+      "line": 3268,
+      "table": "bank_statements",
+      "column": "statement_date",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\accounting\\accounting_api.routes.ts",
+      "line": 3268,
+      "table": "bank_statements",
+      "column": "total_credits",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\accounting\\accounting_api.routes.ts",
+      "line": 3268,
+      "table": "bank_statements",
+      "column": "total_debits",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\accounting\\accounting_api.routes.ts",
+      "line": 3268,
+      "table": "bank_statements",
+      "column": "currency_code",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\accounting\\accounting_api.routes.ts",
+      "line": 3268,
+      "table": "bank_statements",
+      "column": "source",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\accounting\\accounting_api.routes.ts",
+      "line": 3268,
+      "table": "bank_statements",
+      "column": "file_name",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\accounting\\accounting_api.routes.ts",
+      "line": 3268,
+      "table": "bank_statements",
+      "column": "imported_by",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\accounting\\accounting_api.routes.ts",
+      "line": 3272,
+      "table": "bank_statement_lines",
+      "column": "line_no",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\accounting\\accounting_api.routes.ts",
+      "line": 3272,
+      "table": "bank_statement_lines",
+      "column": "transaction_date",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\accounting\\accounting_api.routes.ts",
+      "line": 3272,
+      "table": "bank_statement_lines",
+      "column": "external_id",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\accounting\\accounting_api.routes.ts",
+      "line": 3272,
+      "table": "bank_statement_lines",
+      "column": "raw_data",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\accounting\\services\\financial_integration.service.ts",
+      "line": 216,
+      "table": "bank_accounts",
+      "column": "account_name",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\costs\\repositories\\cost.repository.ts",
+      "line": 520,
+      "table": "estimated_budgets",
+      "column": "name",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\costs\\repositories\\cost.repository.ts",
+      "line": 520,
+      "table": "estimated_budgets",
+      "column": "type",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\costs\\repositories\\cost.repository.ts",
+      "line": 520,
+      "table": "estimated_budgets",
+      "column": "branch",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\costs\\repositories\\cost.repository.ts",
+      "line": 520,
+      "table": "estimated_budgets",
+      "column": "period",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\costs\\repositories\\cost.repository.ts",
+      "line": 520,
+      "table": "estimated_budgets",
+      "column": "start_date",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\costs\\repositories\\cost.repository.ts",
+      "line": 520,
+      "table": "estimated_budgets",
+      "column": "end_date",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\costs\\repositories\\cost.repository.ts",
+      "line": 520,
+      "table": "estimated_budgets",
+      "column": "planned_amount",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\costs\\repositories\\cost.repository.ts",
+      "line": 520,
+      "table": "estimated_budgets",
+      "column": "status",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\costs\\repositories\\cost.repository.ts",
+      "line": 551,
+      "table": "standard_costs",
+      "column": "rate_type",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\costs\\repositories\\cost.repository.ts",
+      "line": 551,
+      "table": "standard_costs",
+      "column": "base_rate",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\costs\\repositories\\cost.repository.ts",
+      "line": 551,
+      "table": "standard_costs",
+      "column": "hours",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\costs\\repositories\\cost.repository.ts",
+      "line": 551,
+      "table": "standard_costs",
+      "column": "std_materials",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\costs\\repositories\\cost.repository.ts",
+      "line": 551,
+      "table": "standard_costs",
+      "column": "std_labor",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\costs\\repositories\\cost.repository.ts",
+      "line": 551,
+      "table": "standard_costs",
+      "column": "std_overhead",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\costs\\repositories\\cost.repository.ts",
+      "line": 551,
+      "table": "standard_costs",
+      "column": "std_utilities",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\enterprise\\repositories\\enterprise.repository.ts",
+      "line": 369,
+      "table": "maintenance_assets",
+      "column": "__dyn__",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\hotel_pms\\repositories\\hotel.repository.ts",
+      "line": 912,
+      "table": "hotel_rooms",
+      "column": "cleaning_status",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "modules\\hotel_pms\\repositories\\hotel.repository.ts",
+      "line": 1545,
+      "table": "hotel_reservations",
+      "column": "guest_name",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\hotel_pms\\repositories\\hotel.repository.ts",
+      "line": 1545,
+      "table": "hotel_reservations",
+      "column": "guest_phone",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\hotel_pms\\repositories\\hotel.repository.ts",
+      "line": 1558,
+      "table": "hotel_reservations",
+      "column": "guest_name",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "modules\\hotel_pms\\repositories\\hotel.repository.ts",
+      "line": 1558,
+      "table": "hotel_reservations",
+      "column": "guest_phone",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "modules\\hotel_pms\\repositories\\hotel.repository.ts",
+      "line": 2175,
+      "table": "hotel_folios",
+      "column": "updated_at",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "modules\\hotel_pms\\repositories\\hotel.repository.ts",
+      "line": 2182,
+      "table": "hotel_reservations",
+      "column": "updated_at",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "modules\\hr\\hr_api.routes.ts",
+      "line": 1615,
+      "table": "employees",
+      "column": "__dyn__",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "modules\\hr\\hr_api.routes.ts",
+      "line": 1898,
+      "table": "employees",
+      "column": "__dyn__",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "modules\\hr\\hr_api.routes.ts",
+      "line": 7950,
+      "table": "employees",
+      "column": "__dyn__",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "modules\\hr\\hr_api.routes.ts",
+      "line": 10538,
+      "table": "employees",
+      "column": "updated_at",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "modules\\restaurant\\restaurant_api.routes.ts",
+      "line": 455,
+      "table": "complaints",
+      "column": "customer_phone",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\restaurant\\restaurant_api.routes.ts",
+      "line": 455,
+      "table": "complaints",
+      "column": "category",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\restaurant\\restaurant_api.routes.ts",
+      "line": 455,
+      "table": "complaints",
+      "column": "details",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\restaurant\\restaurant_api.routes.ts",
+      "line": 2872,
+      "table": "treasury_accounts",
+      "column": "is_active",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\restaurant\\restaurant_api.routes.ts",
+      "line": 2888,
+      "table": "treasury_accounts",
+      "column": "is_active",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\restaurant\\restaurant_api.routes.ts",
+      "line": 4607,
+      "table": "customers",
+      "column": "notes",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "modules\\restaurant\\restaurant_api.routes.ts",
+      "line": 4607,
+      "table": "customers",
+      "column": "tax_number",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "modules\\restaurant\\restaurant_api.routes.ts",
+      "line": 4607,
+      "table": "customers",
+      "column": "updated_at",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "modules\\sales\\services\\pricing.service.ts",
+      "line": 514,
+      "table": "ingredients",
+      "column": "selling_price",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "modules\\system\\approval_api.routes.ts",
+      "line": 330,
+      "table": "employees",
+      "column": "__dyn__",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "modules\\warehouses\\routes\\enterprise_inventory.routes.ts",
+      "line": 2705,
+      "table": "material_requests",
+      "column": "approved_by_dept",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "modules\\warehouses\\routes\\enterprise_inventory.routes.ts",
+      "line": 2705,
+      "table": "material_requests",
+      "column": "approved_dept_at",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "modules\\warehouses\\routes\\enterprise_inventory.routes.ts",
+      "line": 2775,
+      "table": "material_requests",
+      "column": "approved_by_wh",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "modules\\warehouses\\routes\\enterprise_inventory.routes.ts",
+      "line": 2775,
+      "table": "material_requests",
+      "column": "approved_wh_at",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "modules\\warehouses\\routes\\enterprise_inventory.routes.ts",
+      "line": 2832,
+      "table": "material_requests",
+      "column": "rejection_reason",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "modules\\warehouses\\routes\\enterprise_inventory.routes.ts",
+      "line": 3021,
+      "table": "material_request_items",
+      "column": "updated_at",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "modules\\warehouses\\routes\\enterprise_inventory.routes.ts",
+      "line": 3045,
+      "table": "material_requests",
+      "column": "issued_at",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "modules\\warehouses\\routes\\enterprise_inventory.routes.ts",
+      "line": 3045,
+      "table": "material_requests",
+      "column": "issued_by",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "modules\\warehouses\\routes\\enterprise_inventory.routes.ts",
+      "line": 3045,
+      "table": "material_requests",
+      "column": "recipient_name",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "modules\\warehouses\\services\\inventory.service.ts",
+      "line": 204,
+      "table": "inventory_items",
+      "column": "__dyn__",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 539,
+      "table": "putaway_rules",
+      "column": "rule_name",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 539,
+      "table": "putaway_rules",
+      "column": "section_id",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 539,
+      "table": "putaway_rules",
+      "column": "is_active",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 568,
+      "table": "product_bundles",
+      "column": "name",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 568,
+      "table": "product_bundles",
+      "column": "code",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 568,
+      "table": "product_bundles",
+      "column": "price",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 568,
+      "table": "product_bundles",
+      "column": "items",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 604,
+      "table": "stock_entries",
+      "column": "entry_type",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 604,
+      "table": "stock_entries",
+      "column": "warehouse_id",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 604,
+      "table": "stock_entries",
+      "column": "items",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 604,
+      "table": "stock_entries",
+      "column": "status",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 633,
+      "table": "delivery_notes",
+      "column": "note_number",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 633,
+      "table": "delivery_notes",
+      "column": "customer_id",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 633,
+      "table": "delivery_notes",
+      "column": "items",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 1129,
+      "table": "suppliers",
+      "column": "code",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "modules\\warehouses\\warehouses_api.routes.ts",
+      "line": 1141,
+      "table": "suppliers",
+      "column": "code",
+      "ctx": "UPDATE"
+    },
+    {
+      "file": "server-db-init.ts",
+      "line": 5926,
+      "table": "branches",
+      "column": "location",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "server-db-init.ts",
+      "line": 5926,
+      "table": "branches",
+      "column": "phone",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "server.ts",
+      "line": 1684,
+      "table": "user_logs",
+      "column": "username",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "server.ts",
+      "line": 1684,
+      "table": "user_logs",
+      "column": "ip_address",
+      "ctx": "INSERT"
+    },
+    {
+      "file": "server.ts",
+      "line": 1684,
+      "table": "user_logs",
+      "column": "created_at",
+      "ctx": "INSERT"
+    }
+  ]
+}

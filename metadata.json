@@ -1,0 +1,11 @@
+{
+  "name": "Remo Pro ERP",
+  "description": "نظام ERP متكامل لإدارة المؤسسات، إدارة الإنتاج والتصنيع المربوط بالمخازن والوصفات وحركات المخزون، إدارة الخزينة والمصارف، العهد المالية، الموارد البشرية، والحسابات العامة.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

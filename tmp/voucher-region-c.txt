@@ -1,0 +1,42 @@
+              {/* ── Row 2: party type ── */}
+              <div className="space-y-2">
+                <div className="flex items-center justify-between gap-3">
+                  <label className="flex items-center gap-1.5 text-[11px] font-black text-slate-500">
+                    <Users className="w-3.5 h-3.5" />
+                    نوع الطرف المرتبط <span className="text-rose-500">*</span>
+                  </label>
+                  <span className="text-[10px] font-bold text-slate-400">اختر النوع ثم حدّد الجهة بالبحث</span>
+                </div>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5 rounded-2xl bg-slate-100/90 p-1.5">
+                  {([
+                    { key: "supplier", label: "مورد", icon: Building2 },
+                    { key: "customer", label: "عميل", icon: User },
+                    { key: "employee", label: "موظف", icon: Briefcase },
+                    { key: "other", label: "جهة أخرى", icon: Layers },
+                  ] as const).map((party) => {
+                    const PartyIcon = party.icon;
+                    const active = voucherForm.client_type === party.key;
+                    return (
+                      <button
+                        key={party.key}
+                        type="button"
+                        onClick={() => {
+                          setVoucherForm(prev => ({ ...prev, client_type: party.key, client_name: "" }));
+                          setSelectedSupplier(null);
+                          setSelectedCustomer(null);
+                          setSelectedEmployee(null);
+                          setPartySearchQuery("");
+                          setIsPartyDropdownOpen(false);
+                        }}
+                        className={`flex items-center justify-center gap-1.5 rounded-xl py-2.5 text-[11px] font-black transition-all ${
+                          active ? voucherAccent.toggleActive : "text-slate-500 hover:text-slate-800"
+                        }`}
+                      >
+                        <PartyIcon className="w-4 h-4" />
+                        {party.label}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+

@@ -1,0 +1,14 @@
+import fs from 'fs';
+import pg from 'pg';
+const env = fs.readFileSync('.env','utf8');
+const get = (k) => (new RegExp('^'+k+'\s*=\s*(.+)$','m').exec(env)?.[1]||'').trim().replace(/^["']|["']$/g,'');
+const url = get('DATABASE_URL');
+console.log('db=', url.replace(/\/\/[^@]*@/, '//***@'));
+const pool = new pg.Pool({ connectionString: url });
+const r = await pool.query("select username, role, name, status from users where role ilike '%admin%' order by id limit 10");
+console.log(r.rows);
+const wh = await pool.query("select id,name,code from warehouses limit 10");
+console.log(wh.rows);
+const cc = await pool.query("select id,name,code from cost_centers limit 10");
+console.log(cc.rows);
+await pool.end();

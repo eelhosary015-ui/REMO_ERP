@@ -1,0 +1,14 @@
+﻿import pg from "pg";
+import { config } from "dotenv";
+config({quiet:true});
+const c = new pg.Client({connectionString: process.env.DATABASE_URL});
+await c.connect();
+const t = await c.query(`SELECT table_name FROM information_schema.tables WHERE table_schema='public' AND (table_name ILIKE '%close%' OR table_name ILIKE '%period%' OR table_name ILIKE '%audit%' OR table_name ILIKE '%lock%') ORDER BY 1`);
+console.log("TABLES:", t.rows.map(r=>r.table_name));
+const ac = await c.query("SELECT * FROM account_config ORDER BY key");
+console.table(ac.rows);
+const cols = await c.query(`SELECT column_name,data_type FROM information_schema.columns WHERE table_name='journal_entries' ORDER BY ordinal_position`);
+console.log("journal_entries cols:", cols.rows.map(r=>r.column_name).join(","));
+const acc = await c.query(`SELECT id,code,name_ar,type,account_nature FROM accounts WHERE code LIKE '3%' OR code LIKE '7%' OR code LIKE '8%' OR type IN ('equity','revenue','expense') ORDER BY code LIMIT 40`);
+console.table(acc.rows);
+await c.end();

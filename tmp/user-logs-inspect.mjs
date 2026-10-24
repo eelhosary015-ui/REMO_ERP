@@ -1,0 +1,13 @@
+import "dotenv/config";
+import pg from "pg";
+const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL });
+const cols = await pool.query(`SELECT column_name, data_type, is_nullable FROM information_schema.columns WHERE table_name='user_logs' ORDER BY ordinal_position`);
+console.log("user_logs columns:");
+console.table(cols.rows);
+const cnt = await pool.query(`SELECT COUNT(*)::int AS c FROM user_logs`);
+console.log("rows:", cnt.rows[0].c);
+const sample = await pool.query(`SELECT * FROM user_logs ORDER BY id DESC LIMIT 5`);
+console.log(JSON.stringify(sample.rows, null, 2).slice(0, 2500));
+const acts = await pool.query(`SELECT action, COUNT(*)::int AS c FROM user_logs GROUP BY action ORDER BY c DESC LIMIT 25`);
+console.table(acts.rows);
+await pool.end();

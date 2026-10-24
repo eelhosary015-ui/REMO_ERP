@@ -1,0 +1,14 @@
+﻿import pg from "pg";
+import { config } from "dotenv";
+config({quiet:true});
+const url = process.env.DATABASE_URL.replace(/\/[^/]+$/, "/erp_system1_test");
+const c = new pg.Client({connectionString: url});
+await c.connect();
+const q = async (s,p) => (await c.query(s,p)).rows;
+console.log("FY:", await q("select id,name,status from fiscal_years order by id"));
+console.log("periods count:", await q("select count(*)::int n from financial_periods"));
+console.log("leftover 2027:", await q("select count(*)::int n from financial_periods where year=2027"));
+console.log("test entries:", await q("select count(*)::int n from journal_entries where date >= '2031-01-01'"));
+console.log("events:", await q("select count(*)::int n from financial_period_events"));
+console.log("oct2026:", await q("select month,year,status from financial_periods where year=2026 and month=10"));
+await c.end();

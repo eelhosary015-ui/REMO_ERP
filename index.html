@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" translate="no" class="notranslate">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- منع المتصفح من عرض شريط/اقتراح الترجمة التلقائية داخل النظام -->
+    <meta name="google" content="notranslate" />
+    <meta http-equiv="Content-Language" content="ar" />
+    <!-- تطبيق اللغة والاتجار من أول رسم قبل تحميل React + تأكيد منع الترجمة -->
+    <script>
+      (function () {
+        try {
+          var lang = localStorage.getItem("app_lang") === "en" ? "en" : "ar";
+          var el = document.documentElement;
+          el.setAttribute("translate", "no");
+          el.classList.add("notranslate");
+          el.setAttribute("lang", lang);
+          el.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+          document.addEventListener("DOMContentLoaded", function () {
+            document.body.classList.add("notranslate");
+            var meta = document.querySelector('meta[name="google"]');
+            if (!meta) {
+              meta = document.createElement("meta");
+              meta.setAttribute("name", "google");
+              document.head.appendChild(meta);
+            }
+            meta.setAttribute("content", "notranslate");
+          });
+        } catch (e) {}
+      })();
+    </script>
+    <title>Remo Pro ERP</title>
+    <meta name="description" content="نظام ERP متكامل لإدارة المؤسسات، إدارة الإنتاج والتصنيع المربوط بالمخازن والوصفات وحركات المخزون، إدارة الخزينة والمصارف، العهد المالية، الموارد البشرية، والحسابات العامة." />
+    <meta property="og:title" content="Remo Pro ERP" />
+    <meta property="og:description" content="نظام ERP متكامل لإدارة المؤسسات، إدارة الإنتاج والتصنيع المربوط بالمخازن والوصفات وحركات المخزون، إدارة الخزينة والمصارف، العهد المالية، الموارد البشرية، والحسابات العامة." />
+    <meta name="theme-color" content="#0f172a" />
+    <!-- أيقونة التطبيق (التبويب / الموبايل / التطبيق المثبّت) -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/src/assets/branding/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/src/assets/branding/favicon-64.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/src/assets/branding/favicon-192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/src/assets/branding/apple-touch-icon.png" />
+  </head>
+  <body class="notranslate">
+    <div id="root" class="notranslate"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

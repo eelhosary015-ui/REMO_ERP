@@ -1,0 +1,36 @@
+from pathlib import Path
+p=Path('/mnt/data/phase4/modules/restaurant/restaurant_api.routes.ts'); s=p.read_text()
+# Update order
+route=s.index('router.put("/api/orders/:id"')
+pos=s.index('const oldOrder = (await client.query("SELECT * FROM orders WHERE id = $1", [id])).rows[0];',route)
+s=s[:pos]+s[pos:].replace('const oldOrder = (await client.query("SELECT * FROM orders WHERE id = $1", [id])).rows[0];','const oldOrder = (await client.query("SELECT * FROM orders WHERE id = $1 FOR UPDATE", [id])).rows[0];',1)
+# insert modification before reverse
+marker='      // Reverse old items if deducted'
+idx=s.index(marker,route)
+ins='''      const modificationDetails = items.map((i: any) => `${i.name || i.id} (x${i.quantity})`).join(', ');\n      const modificationRes = await client.query(\n        "INSERT INTO order_modifications (order_id, type, old_total, new_total, notes, details) VALUES ($1, 'modification', $2, $3, $4, $5) RETURNING id",\n        [id, oldOrder.total, total, notes || "تعديل الطلب", modificationDetails]\n      );\n      const modificationId = Number(modificationRes.rows[0].id);\n      \n'''
+s=s[:idx]+ins+s[idx:]
+# replace reverse block
+start=s.index('      // Reverse old items if deducted',route); end=s.index('      // Delete existing items',start)
+new='''      // Reverse the old deduction through the central engine.\n      if (oldOrder.is_deducted && branchWarehouse) {\n        const oldItems = (await client.query("SELECT * FROM order_items WHERE order_id = $1", [id])).rows;\n        const moves = new Map<string, number>();\n        for (const item of oldItems) {\n          const recipe = (await client.query("SELECT ingredient_id, quantity FROM product_ingredients WHERE product_id = $1", [item.product_id])).rows;\n          for (const pi of recipe) {\n            const qty = Number(pi.quantity || 0) * Number(item.quantity || 1);\n            moves.set(String(pi.ingredient_id), (moves.get(String(pi.ingredient_id)) || 0) + qty);\n          }\n        }\n        for (const [ingredientId, qty] of moves) {\n          await moveStock(client, { warehouse_id: Number(branchWarehouse.id), ingredient_id: Number(ingredientId), delta: qty, ref_type: "pos_order_edit_reverse", ref_id: modificationId, user: String((req as any).user?.id || "system"), notes: `عكس مخزون تعديل أوردر رقم ${id}` });\n          await client.query("INSERT INTO inventory_transactions (warehouse_id, ingredient_id, quantity, type, reference_id, notes) VALUES ($1, $2, $3, 'in', $4, $5)", [branchWarehouse.id, ingredientId, qty, id, `عكس مخزون تعديل أوردر رقم ${id}`]);\n        }\n      }\n\n'''
+s=s[:start]+new+s[end:]
+# replace new deduction block
+start=s.index('      // Deduct new items if deducted',route); end=s.index('      // Update order total and notes',start)
+new='''      // Apply the replacement deduction through the central engine.\n      if (oldOrder.is_deducted && branchWarehouse) {\n        const moves = new Map<string, number>();\n        for (const item of items) {\n          const recipe = (await client.query("SELECT ingredient_id, quantity FROM product_ingredients WHERE product_id = $1", [item.id])).rows;\n          for (const pi of recipe) {\n            const qty = Number(pi.quantity || 0) * Number(item.quantity || 1);\n            moves.set(String(pi.ingredient_id), (moves.get(String(pi.ingredient_id)) || 0) + qty);\n          }\n        }\n        for (const [ingredientId, qty] of moves) {\n          await moveStock(client, { warehouse_id: Number(branchWarehouse.id), ingredient_id: Number(ingredientId), delta: -qty, ref_type: "pos_order_edit_apply", ref_id: modificationId, user: String((req as any).user?.id || "system"), notes: `خصم مخزون تعديل أوردر رقم ${id}` });\n          await client.query("INSERT INTO inventory_transactions (warehouse_id, ingredient_id, quantity, type, reference_id, notes) VALUES ($1, $2, $3, 'out', $4, $5)", [branchWarehouse.id, ingredientId, qty, id, `خصم مخزون تعديل أوردر رقم ${id}`]);\n        }\n      }\n\n'''
+s=s[:start]+new+s[end:]
+# remove duplicate later modification insert
+needle='''      // Record modification\n      const details = items.map((i: any) => `${i.name} (x${i.quantity})`).join(', ');\n      await client.query(\n        "INSERT INTO order_modifications (order_id, type, old_total, new_total, notes, details) VALUES ($1, 'modification', $2, $3, $4, $5)",\n        [id, oldOrder.total, total, notes || "تعديل الطلب", details]\n      );\n      \n'''
+s=s.replace(needle,'',1)
+# Add-items lock
+route=s.index('router.post("/api/orders/:orderId/add-items"')
+pos=s.index('const order = (await client.query("SELECT * FROM orders WHERE id = $1", [orderId])).rows[0];',route)
+s=s[:pos]+s[pos:].replace('const order = (await client.query("SELECT * FROM orders WHERE id = $1", [orderId])).rows[0];','const order = (await client.query("SELECT * FROM orders WHERE id = $1 FOR UPDATE", [orderId])).rows[0];',1)
+# add modification id before items loop
+idx=s.index('      for (const item of items) {',route)
+ins='''      const additionDetails = items.map((i: any) => `${i.name || i.id} (x${i.quantity})`).join(', ');\n      const additionRes = await client.query(\n        "INSERT INTO order_modifications (order_id, type, old_total, new_total, notes, details) VALUES ($1, 'addition', $2, $3, $4, $5) RETURNING id",\n        [orderId, order.total, order.total + Math.max(0, Number(additionalTotal) - Number(additionalDiscount || 0)), notes || "إضافة عناصر", additionDetails]\n      );\n      const additionId = Number(additionRes.rows[0].id);\n\n'''
+s=s[:idx]+ins+s[idx:]
+# replace add stock block
+start=s.index('      if (order.is_deducted) {',route); end=s.index('      await client.query("COMMIT");',start)
+new='''      if (order.is_deducted) {\n        let branchWarehouse = (await client.query("SELECT id FROM warehouses WHERE branch_id = $1 AND is_kitchen = 1 LIMIT 1", [order.branch_id])).rows[0];\n        if (!branchWarehouse) branchWarehouse = (await client.query("SELECT id FROM warehouses WHERE branch_id = $1 LIMIT 1", [order.branch_id])).rows[0];\n        if (!branchWarehouse) throw new Error("لا يوجد مخزن للفرع لتنفيذ الإضافة");\n        const moves = new Map<string, number>();\n        for (const item of items) {\n          const recipe = (await client.query("SELECT ingredient_id, quantity FROM product_ingredients WHERE product_id = $1", [item.id])).rows;\n          for (const pi of recipe) {\n            const qty = Number(pi.quantity || 0) * Number(item.quantity || 1);\n            moves.set(String(pi.ingredient_id), (moves.get(String(pi.ingredient_id)) || 0) + qty);\n          }\n        }\n        for (const [ingredientId, qty] of moves) {\n          await moveStock(client, { warehouse_id: Number(branchWarehouse.id), ingredient_id: Number(ingredientId), delta: -qty, ref_type: "pos_order_add", ref_id: additionId, user: String((req as any).user?.id || "system"), notes: `خصم مقادير إضافية لأوردر رقم ${orderId}` });\n          await client.query("INSERT INTO inventory_transactions (warehouse_id, ingredient_id, quantity, type, reference_id, notes) VALUES ($1, $2, $3, 'out', $4, $5)", [branchWarehouse.id, ingredientId, qty, orderId, `خصم مقادير إضافية لأوردر رقم ${orderId}`]);\n        }\n      }\n      \n'''
+s=s[:start]+new+s[end:]
+p.write_text(s)
+print('patch4 done')

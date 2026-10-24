@@ -1,0 +1,12 @@
+﻿import pg from "pg";
+const c = new pg.Client({ connectionString: "postgres://postgres:Aa017217*@127.0.0.1:5432/erp_system2" });
+await c.connect();
+const cols = await c.query("SELECT column_name, data_type, is_nullable, column_default FROM information_schema.columns WHERE table_name='accounts' ORDER BY ordinal_position");
+for (const r of cols.rows) console.log(`${r.column_name}\t${r.data_type}\t${r.is_nullable}\t${r.column_default || ""}`);
+console.log("\n=== sample row ===");
+const s = await c.query("SELECT * FROM accounts WHERE code='5101'");
+console.log(JSON.stringify(s.rows[0], null, 1));
+console.log("\n=== journal_entries columns ===");
+const je = await c.query("SELECT column_name FROM information_schema.columns WHERE table_name='journal_entries' ORDER BY ordinal_position");
+console.log(je.rows.map(r=>r.column_name).join(", "));
+await c.end();

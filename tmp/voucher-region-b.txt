@@ -1,0 +1,100 @@
+            <div className="flex-1 overflow-y-auto px-6 py-5 space-y-5 text-xs">
+              {draftAvailable && (
+                <div className="flex items-center justify-between gap-3 rounded-xl border border-amber-200 bg-amber-50 px-3.5 py-2.5">
+                  <span className="text-[11px] font-bold text-amber-800">لديك مسودة سند محفوظة على هذا الجهاز</span>
+                  <button
+                    type="button"
+                    onClick={restoreVoucherDraft}
+                    className="shrink-0 rounded-lg bg-white border border-amber-300 px-2.5 py-1 text-[10.5px] font-black text-amber-800 hover:bg-amber-100 transition-colors"
+                  >
+                    استعادة المسودة
+                  </button>
+                </div>
+              )}
+
+              {/* ── Row 1: account + amount ── */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <div className="space-y-1.5">
+                  <label className="flex items-center gap-1.5 text-[11px] font-black text-slate-500">
+                    <Wallet className="w-3.5 h-3.5" />
+                    الخزينة / الحساب المعني <span className="text-rose-500">*</span>
+                  </label>
+                  <div className="relative">
+                    <select
+                      value={voucherForm.account_id}
+                      onChange={(e) => setVoucherForm(prev => ({ ...prev, account_id: e.target.value }))}
+                      className={`w-full appearance-none bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm font-black text-slate-900 outline-none transition-all hover:border-slate-300 focus:bg-white focus:ring-4 ${voucherAccent.ring}`}
+                      required
+                    >
+                      {accounts.map(acc => (
+                        <option key={acc.id} value={acc.id}>
+                          {acc.name}
+                        </option>
+                      ))}
+                    </select>
+                    <ChevronDown className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+                  </div>
+                  <div className="flex items-center justify-between gap-2 rounded-xl border border-slate-200 bg-white px-3.5 py-2.5">
+                    <span className="flex items-center gap-1.5 text-[10.5px] font-bold text-slate-500">
+                      <span className={`w-1.5 h-1.5 rounded-full ${selectedAccountBalance >= 0 ? "bg-emerald-500" : "bg-rose-500"}`} />
+                      الرصيد المتوفر
+                    </span>
+                    <span className={`text-sm font-black tabular-nums ${selectedAccountBalance >= 0 ? "text-emerald-700" : "text-rose-700"}`}>
+                      {fmtMoney(selectedAccountBalance)} <span className="text-[10px] font-bold text-slate-400">ج.م</span>
+                    </span>
+                  </div>
+                </div>
+
+                <div className="space-y-1.5">
+                  <label className="flex items-center gap-1.5 text-[11px] font-black text-slate-500">
+                    <DollarSign className="w-3.5 h-3.5" />
+                    المبلغ <span className="text-rose-500">*</span>
+                  </label>
+                  <div className="relative">
+                    <input
+                      type="number"
+                      step="any"
+                      min="0"
+                      inputMode="decimal"
+                      value={voucherForm.amount}
+                      onChange={(e) => setVoucherForm(prev => ({ ...prev, amount: e.target.value }))}
+                      placeholder="0.00"
+                      className={`w-full bg-slate-50 border border-slate-200 rounded-xl pl-14 pr-4 py-3 text-2xl font-black tabular-nums tracking-tight text-slate-900 outline-none transition-all placeholder:text-slate-300 hover:border-slate-300 focus:bg-white focus:ring-4 ${voucherAccent.ring}`}
+                      required
+                    />
+                    <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[11px] font-black text-slate-400">ج.م</span>
+                  </div>
+                  <div className="flex flex-wrap items-center gap-1.5">
+                    {[
+                      selectedPartyBalance > 0 ? { label: `كامل المستحق ${fmtMoney(selectedPartyBalance)}`, value: selectedPartyBalance } : null,
+                      selectedAccountBalance > 0 ? { label: `كامل الرصيد ${fmtMoney(selectedAccountBalance)}`, value: selectedAccountBalance } : null,
+                      selectedAccountBalance > 0 ? { label: "النصف", value: Math.round(selectedAccountBalance / 2) } : null,
+                    ]
+                      .filter((quick): quick is { label: string; value: number } => quick !== null)
+                      .map((quick) => (
+                        <button
+                          key={quick.label}
+                          type="button"
+                          onClick={() => setVoucherForm(prev => ({ ...prev, amount: String(quick.value) }))}
+                          className="rounded-lg border border-slate-200 bg-white px-2 py-1 text-[10px] font-black text-slate-600 hover:border-slate-300 hover:bg-slate-50 transition-colors"
+                        >
+                          {quick.label}
+                        </button>
+                      ))}
+                    {Number(voucherForm.amount) > 0 && (
+                      <button
+                        type="button"
+                        onClick={() => setVoucherForm(prev => ({ ...prev, amount: "" }))}
+                        className="rounded-lg px-2 py-1 text-[10px] font-black text-slate-400 hover:text-rose-600 transition-colors"
+                      >
+                        تفريغ
+                      </button>
+                    )}
+                  </div>
+                  <p className="text-[10.5px] font-bold text-slate-400 tabular-nums">
+                    {Number(voucherForm.amount) > 0
+                      ? `المبلغ المسجّل: ${fmtMoney(Number(voucherForm.amount))} ج.م`
+                      : "أدخل المبلغ يدويًا أو اختر أحد المقترحات"}
+                  </p>
+                </div>
+              </div>

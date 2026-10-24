@@ -1,0 +1,12 @@
+﻿import pg from "pg";
+import { config } from "dotenv";
+config({quiet:true});
+const c = new pg.Client({connectionString: process.env.DATABASE_URL});
+await c.connect();
+const dbs = await c.query("SELECT datname FROM pg_database ORDER BY 1");
+console.log("DBS:", dbs.rows.map(r=>r.datname).join(", "));
+const fp = await c.query("SELECT id,month,year,status,start_date,end_date,closed_at,fiscal_year_id FROM financial_periods ORDER BY year,month");
+console.table(fp.rows);
+const fy = await c.query("SELECT * FROM fiscal_years ORDER BY start_date");
+console.table(fy.rows);
+await c.end();

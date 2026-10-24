@@ -1,0 +1,16 @@
+﻿import pg from "pg";
+const c = new pg.Client({ connectionString: "postgres://postgres:Aa017217*@127.0.0.1:5432/erp_system2" });
+await c.connect();
+const q = async (sql, p = []) => (await c.query(sql, p)).rows;
+console.log("=== indexes journal_entries ===");
+for (const r of await q(`SELECT indexdef FROM pg_indexes WHERE tablename='journal_entries'`)) console.log("  " + r.indexdef);
+console.log("\n=== triggers journal_entries ===");
+for (const r of await q(`SELECT tgname, pg_get_triggerdef(oid) def FROM pg_trigger WHERE tgrelid='journal_entries'::regclass AND NOT tgisinternal`)) console.log("  " + r.tgname + " :: " + r.def.slice(0,130));
+console.log("\n=== آخر entry_number ===");
+for (const r of await q(`SELECT id, entry_number FROM journal_entries ORDER BY id DESC LIMIT 5`)) console.log(`  #${r.id} ${r.entry_number}`);
+console.log("\n=== period id October ===");
+for (const r of await q(`SELECT id, year, month, status FROM financial_periods WHERE year=2026 AND month=10`)) console.log("  ", JSON.stringify(r));
+console.log("\n=== statuses المستخدمة ===");
+for (const r of await q(`SELECT status, count(*)::int n FROM journal_entries GROUP BY 1`)) console.log(`  ${r.status}: ${r.n}`);
+for (const r of await q(`SELECT status, count(*)::int n FROM sales_invoices GROUP BY 1`)) console.log(`  invoice[${r.status}]: ${r.n}`);
+await c.end();

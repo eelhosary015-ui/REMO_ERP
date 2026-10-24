@@ -1,0 +1,52 @@
+# ─── Dependencies ────────────────────────────────────────────
+node_modules/
+
+# ─── Build output: Vite / esbuild / Electron / Capacitor ─────
+dist/
+build/
+release/
+out/
+dist-electron/
+android/app/build/
+android/build/
+android/.gradle/
+ios/App/build/
+*.tsbuildinfo
+
+# ─── Stray duplicate folders and file copies ─────────────────
+# (e.g. "dist - Copy", "uploads - Copy", ".continue - Copy")
+* - Copy/
+*-Copy/
+*.bak
+*~
+
+# ─── Runtime data — never commit ─────────────────────────────
+uploads/
+backups/
+data/
+wa_auth_info/
+
+# ─── Secrets / environment ───────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ─── Logs and process managers ───────────────────────────────
+*.log
+logs/
+.pm2/
+pm2-*.log
+
+# ─── Tests / coverage ────────────────────────────────────────
+coverage/
+.vitest/
+
+# ─── Audit and diagnostic scratch ────────────────────────────
+_audit/
+
+# ─── OS / editor ─────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json

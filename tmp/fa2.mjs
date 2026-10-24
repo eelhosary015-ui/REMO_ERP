@@ -1,0 +1,11 @@
+﻿import pg from "pg";
+import { config } from "dotenv";
+config({quiet:true});
+const c = new pg.Client({connectionString: process.env.DATABASE_URL});
+await c.connect();
+const cols = await c.query("select column_name,data_type from information_schema.columns where table_name='maintenance_assets' order by ordinal_position");
+console.log(cols.rows.map(r=>r.column_name+":"+r.data_type).join(", "));
+const rows = await c.query("select * from maintenance_assets limit 3");
+console.log("count:", (await c.query("select count(*)::int n from maintenance_assets")).rows[0].n);
+console.log(rows.rows);
+await c.end();

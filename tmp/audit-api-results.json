@@ -1,0 +1,1406 @@
+[
+  {
+    "path": "/api/account-config",
+    "status": 200,
+    "ms": 112,
+    "body": ""
+  },
+  {
+    "path": "/api/accounts",
+    "status": 200,
+    "ms": 14,
+    "body": ""
+  },
+  {
+    "path": "/api/adjustment-reasons",
+    "status": 200,
+    "ms": 28,
+    "body": ""
+  },
+  {
+    "path": "/api/approvals",
+    "status": 200,
+    "ms": 121,
+    "body": ""
+  },
+  {
+    "path": "/api/approvals/dashboard",
+    "status": 200,
+    "ms": 19,
+    "body": ""
+  },
+  {
+    "path": "/api/approvals/history",
+    "status": 200,
+    "ms": 14,
+    "body": ""
+  },
+  {
+    "path": "/api/approvals/pending-count",
+    "status": 200,
+    "ms": 8,
+    "body": ""
+  },
+  {
+    "path": "/api/approvals/settings",
+    "status": 200,
+    "ms": 20,
+    "body": ""
+  },
+  {
+    "path": "/api/attendance",
+    "status": 200,
+    "ms": 29,
+    "body": ""
+  },
+  {
+    "path": "/api/backup",
+    "status": 200,
+    "ms": 1244,
+    "body": ""
+  },
+  {
+    "path": "/api/backups/list",
+    "status": 200,
+    "ms": 16,
+    "body": ""
+  },
+  {
+    "path": "/api/bank-accounts",
+    "status": 200,
+    "ms": 14,
+    "body": ""
+  },
+  {
+    "path": "/api/bank-reconciliation/transactions",
+    "status": 200,
+    "ms": 9,
+    "body": ""
+  },
+  {
+    "path": "/api/banks/accounts",
+    "status": 200,
+    "ms": 6,
+    "body": ""
+  },
+  {
+    "path": "/api/banks/settings",
+    "status": 200,
+    "ms": 16,
+    "body": ""
+  },
+  {
+    "path": "/api/banks/transactions",
+    "status": 200,
+    "ms": 16,
+    "body": ""
+  },
+  {
+    "path": "/api/branches",
+    "status": 200,
+    "ms": 14,
+    "body": ""
+  },
+  {
+    "path": "/api/budget-vs-actual",
+    "status": 400,
+    "ms": 2,
+    "body": "{\"error\":\"fiscal_year_id is required\"}"
+  },
+  {
+    "path": "/api/companies",
+    "status": 200,
+    "ms": 5,
+    "body": ""
+  },
+  {
+    "path": "/api/cost-centers",
+    "status": 200,
+    "ms": 7,
+    "body": ""
+  },
+  {
+    "path": "/api/costs",
+    "status": 200,
+    "ms": 24,
+    "body": ""
+  },
+  {
+    "path": "/api/costs/activity-logs",
+    "status": 200,
+    "ms": 10,
+    "body": ""
+  },
+  {
+    "path": "/api/costs/budgets",
+    "status": 200,
+    "ms": 3,
+    "body": ""
+  },
+  {
+    "path": "/api/costs/centers",
+    "status": 200,
+    "ms": 10,
+    "body": ""
+  },
+  {
+    "path": "/api/costs/dashboard",
+    "status": 200,
+    "ms": 31,
+    "body": ""
+  },
+  {
+    "path": "/api/costs/integrations/customers",
+    "status": 200,
+    "ms": 26,
+    "body": ""
+  },
+  {
+    "path": "/api/costs/integrations/employees",
+    "status": 200,
+    "ms": 16,
+    "body": ""
+  },
+  {
+    "path": "/api/costs/integrations/ingredients",
+    "status": 200,
+    "ms": 17,
+    "body": ""
+  },
+  {
+    "path": "/api/costs/integrations/products",
+    "status": 200,
+    "ms": 10,
+    "body": ""
+  },
+  {
+    "path": "/api/costs/integrations/suppliers",
+    "status": 200,
+    "ms": 9,
+    "body": ""
+  },
+  {
+    "path": "/api/costs/items",
+    "status": 200,
+    "ms": 17,
+    "body": ""
+  },
+  {
+    "path": "/api/costs/products",
+    "status": 400,
+    "ms": 16,
+    "body": "{\"success\":false,\"error\":\"معرف التكلفة غير صحيح\"}"
+  },
+  {
+    "path": "/api/costs/recipe-costing/all-ingredients",
+    "status": 200,
+    "ms": 29,
+    "body": ""
+  },
+  {
+    "path": "/api/costs/reports/product-costs",
+    "status": 200,
+    "ms": 8,
+    "body": ""
+  },
+  {
+    "path": "/api/costs/settings",
+    "status": 200,
+    "ms": 12,
+    "body": ""
+  },
+  {
+    "path": "/api/customers",
+    "status": 200,
+    "ms": 26,
+    "body": ""
+  },
+  {
+    "path": "/api/db-stats",
+    "status": 200,
+    "ms": 246,
+    "body": ""
+  },
+  {
+    "path": "/api/delivery-areas",
+    "status": 200,
+    "ms": 7,
+    "body": ""
+  },
+  {
+    "path": "/api/delivery/drivers",
+    "status": 200,
+    "ms": 24,
+    "body": ""
+  },
+  {
+    "path": "/api/delivery/orders",
+    "status": 200,
+    "ms": 6,
+    "body": ""
+  },
+  {
+    "path": "/api/employee-penalties",
+    "status": 200,
+    "ms": 25,
+    "body": ""
+  },
+  {
+    "path": "/api/enterprise/command-center",
+    "status": 200,
+    "ms": 23,
+    "body": ""
+  },
+  {
+    "path": "/api/enterprise/notifications",
+    "status": 200,
+    "ms": 20,
+    "body": ""
+  },
+  {
+    "path": "/api/enterprise/search",
+    "status": 200,
+    "ms": 3,
+    "body": ""
+  },
+  {
+    "path": "/api/enterprise/stock",
+    "status": 200,
+    "ms": 27,
+    "body": ""
+  },
+  {
+    "path": "/api/enterprise/warehouse-transfers",
+    "status": 200,
+    "ms": 17,
+    "body": ""
+  },
+  {
+    "path": "/api/enterprise/workflows",
+    "status": 200,
+    "ms": 11,
+    "body": ""
+  },
+  {
+    "path": "/api/financial-periods",
+    "status": 200,
+    "ms": 28,
+    "body": ""
+  },
+  {
+    "path": "/api/fingerprint-devices",
+    "status": 200,
+    "ms": 28,
+    "body": ""
+  },
+  {
+    "path": "/api/fiscal-years",
+    "status": 200,
+    "ms": 19,
+    "body": ""
+  },
+  {
+    "path": "/api/gl-audit",
+    "status": 200,
+    "ms": 17,
+    "body": ""
+  },
+  {
+    "path": "/api/gl-dashboard",
+    "status": 200,
+    "ms": 12,
+    "body": ""
+  },
+  {
+    "path": "/api/health",
+    "status": 200,
+    "ms": 17,
+    "body": ""
+  },
+  {
+    "path": "/api/hr/annual-increases",
+    "status": 200,
+    "ms": 20,
+    "body": ""
+  },
+  {
+    "path": "/api/hr/branches",
+    "status": 200,
+    "ms": 10,
+    "body": ""
+  },
+  {
+    "path": "/api/hr/branches-status",
+    "status": 200,
+    "ms": 16,
+    "body": ""
+  },
+  {
+    "path": "/api/hr/clearance-records",
+    "status": 200,
+    "ms": 17,
+    "body": ""
+  },
+  {
+    "path": "/api/hr/dashboard",
+    "status": 200,
+    "ms": 33,
+    "body": ""
+  },
+  {
+    "path": "/api/hr/departments",
+    "status": 200,
+    "ms": 13,
+    "body": ""
+  },
+  {
+    "path": "/api/hr/documents",
+    "status": 200,
+    "ms": 17,
+    "body": ""
+  },
+  {
+    "path": "/api/hr/employee-portal/admin/employees-report",
+    "status": 200,
+    "ms": 15,
+    "body": ""
+  },
+  {
+    "path": "/api/hr/employee-portal/admin/live-attendance",
+    "status": 200,
+    "ms": 15,
+    "body": ""
+  },
+  {
+    "path": "/api/hr/employee-portal/admin/payroll-summary",
+    "status": 200,
+    "ms": 18,
+    "body": ""
+  },
+  {
+    "path": "/api/hr/employee-portal/my-requests",
+    "status": 200,
+    "ms": 9,
+    "body": ""
+  },
+  {
+    "path": "/api/hr/employee-portal/notifications",
+    "status": 200,
+    "ms": 4,
+    "body": ""
+  },
+  {
+    "path": "/api/hr/employee-portal/profile",
+    "status": 200,
+    "ms": 13,
+    "body": ""
+  },
+  {
+    "path": "/api/hr/employee-warnings",
+    "status": 200,
+    "ms": 16,
+    "body": ""
+  },
+  {
+    "path": "/api/hr/employees",
+    "status": 200,
+    "ms": 18,
+    "body": ""
+  },
+  {
+    "path": "/api/hr/evaluations",
+    "status": 200,
+    "ms": 13,
+    "body": ""
+  },
+  {
+    "path": "/api/hr/leave-requests",
+    "status": 200,
+    "ms": 14,
+    "body": ""
+  },
+  {
+    "path": "/api/hr/notifications/sent-history",
+    "status": 200,
+    "ms": 14,
+    "body": ""
+  },
+  {
+    "path": "/api/hr/penalties",
+    "status": 200,
+    "ms": 3,
+    "body": ""
+  },
+  {
+    "path": "/api/hr/portal-requests",
+    "status": 200,
+    "ms": 13,
+    "body": ""
+  },
+  {
+    "path": "/api/hr/settings",
+    "status": 200,
+    "ms": 17,
+    "body": ""
+  },
+  {
+    "path": "/api/hr/shifts",
+    "status": 200,
+    "ms": 15,
+    "body": ""
+  },
+  {
+    "path": "/api/hr/training-courses",
+    "status": 200,
+    "ms": 17,
+    "body": ""
+  },
+  {
+    "path": "/api/hr/whatsapp/client/status",
+    "status": 200,
+    "ms": 9,
+    "body": ""
+  },
+  {
+    "path": "/api/hr/whatsapp/config",
+    "status": 200,
+    "ms": 18,
+    "body": ""
+  },
+  {
+    "path": "/api/hr/whatsapp/logs",
+    "status": 200,
+    "ms": 13,
+    "body": ""
+  },
+  {
+    "path": "/api/ingredients",
+    "status": 200,
+    "ms": 18,
+    "body": ""
+  },
+  {
+    "path": "/api/inventory-adjustments",
+    "status": 200,
+    "ms": 18,
+    "body": ""
+  },
+  {
+    "path": "/api/inventory-items",
+    "status": 200,
+    "ms": 4,
+    "body": ""
+  },
+  {
+    "path": "/api/inventory-movements",
+    "status": 200,
+    "ms": 17,
+    "body": ""
+  },
+  {
+    "path": "/api/inventory-notifications",
+    "status": 200,
+    "ms": 18,
+    "body": ""
+  },
+  {
+    "path": "/api/inventory-transactions",
+    "status": 200,
+    "ms": 39,
+    "body": ""
+  },
+  {
+    "path": "/api/inventory-wastage",
+    "status": 200,
+    "ms": 15,
+    "body": ""
+  },
+  {
+    "path": "/api/inventory/counts",
+    "status": 200,
+    "ms": 18,
+    "body": ""
+  },
+  {
+    "path": "/api/inventory/delivery-notes",
+    "status": 200,
+    "ms": 14,
+    "body": ""
+  },
+  {
+    "path": "/api/inventory/items",
+    "status": 200,
+    "ms": 10,
+    "body": ""
+  },
+  {
+    "path": "/api/inventory/product-bundles",
+    "status": 200,
+    "ms": 15,
+    "body": ""
+  },
+  {
+    "path": "/api/inventory/putaway-rules",
+    "status": 200,
+    "ms": 15,
+    "body": ""
+  },
+  {
+    "path": "/api/inventory/reports/kpis",
+    "status": 200,
+    "ms": 34,
+    "body": ""
+  },
+  {
+    "path": "/api/inventory/requests",
+    "status": 200,
+    "ms": 12,
+    "body": ""
+  },
+  {
+    "path": "/api/inventory/sales-orders",
+    "status": 200,
+    "ms": 17,
+    "body": ""
+  },
+  {
+    "path": "/api/inventory/stock",
+    "status": 400,
+    "ms": 12,
+    "body": "{\"error\":\"warehouse_id and product_id are required\"}"
+  },
+  {
+    "path": "/api/inventory/stock-entries",
+    "status": 200,
+    "ms": 18,
+    "body": ""
+  },
+  {
+    "path": "/api/inventory/stock-intelligence",
+    "status": 200,
+    "ms": 109,
+    "body": ""
+  },
+  {
+    "path": "/api/inventory/warehouses",
+    "status": 200,
+    "ms": 13,
+    "body": ""
+  },
+  {
+    "path": "/api/journal-entries",
+    "status": 200,
+    "ms": 70,
+    "body": ""
+  },
+  {
+    "path": "/api/kitchen/orders",
+    "status": 200,
+    "ms": 28,
+    "body": ""
+  },
+  {
+    "path": "/api/network/ip",
+    "status": 200,
+    "ms": 20,
+    "body": ""
+  },
+  {
+    "path": "/api/payroll/advances",
+    "status": 200,
+    "ms": 14,
+    "body": ""
+  },
+  {
+    "path": "/api/payroll/deductions",
+    "status": 200,
+    "ms": 12,
+    "body": ""
+  },
+  {
+    "path": "/api/pos/data",
+    "status": 200,
+    "ms": 32,
+    "body": ""
+  },
+  {
+    "path": "/api/pos/orders-for-void",
+    "status": 200,
+    "ms": 46,
+    "body": ""
+  },
+  {
+    "path": "/api/pos/shifts",
+    "status": 200,
+    "ms": 46,
+    "body": ""
+  },
+  {
+    "path": "/api/pos/shifts/options",
+    "status": 200,
+    "ms": 39,
+    "body": ""
+  },
+  {
+    "path": "/api/printers",
+    "status": 200,
+    "ms": 20,
+    "body": ""
+  },
+  {
+    "path": "/api/products",
+    "status": 200,
+    "ms": 20,
+    "body": ""
+  },
+  {
+    "path": "/api/products/manage-data",
+    "status": 200,
+    "ms": 17,
+    "body": ""
+  },
+  {
+    "path": "/api/purchase-orders",
+    "status": 200,
+    "ms": 23,
+    "body": ""
+  },
+  {
+    "path": "/api/purchase-quotations",
+    "status": 200,
+    "ms": 16,
+    "body": ""
+  },
+  {
+    "path": "/api/purchase-receipts",
+    "status": 200,
+    "ms": 31,
+    "body": ""
+  },
+  {
+    "path": "/api/purchase-requests",
+    "status": 200,
+    "ms": 36,
+    "body": ""
+  },
+  {
+    "path": "/api/purchases",
+    "status": 200,
+    "ms": 30,
+    "body": ""
+  },
+  {
+    "path": "/api/purchases/dashboard",
+    "status": 200,
+    "ms": 32,
+    "body": ""
+  },
+  {
+    "path": "/api/realestate/properties",
+    "status": 200,
+    "ms": 13,
+    "body": ""
+  },
+  {
+    "path": "/api/realestate/reports",
+    "status": 200,
+    "ms": 17,
+    "body": ""
+  },
+  {
+    "path": "/api/realestate/settings",
+    "status": 200,
+    "ms": 11,
+    "body": ""
+  },
+  {
+    "path": "/api/reports/branch/delivery",
+    "status": 200,
+    "ms": 18,
+    "body": ""
+  },
+  {
+    "path": "/api/reports/branch/kitchen",
+    "status": 200,
+    "ms": 11,
+    "body": ""
+  },
+  {
+    "path": "/api/reports/branch/web-orders",
+    "status": 200,
+    "ms": 25,
+    "body": ""
+  },
+  {
+    "path": "/api/reports/orders/modifications",
+    "status": 200,
+    "ms": 9,
+    "body": ""
+  },
+  {
+    "path": "/api/reports/pos/detailed",
+    "status": 400,
+    "ms": 5,
+    "body": "{\"error\":\"يجب تحديد فترة التقرير بصيغة تاريخ صحيحة\"}"
+  },
+  {
+    "path": "/api/returns",
+    "status": 200,
+    "ms": 45,
+    "body": ""
+  },
+  {
+    "path": "/api/returns/next-number",
+    "status": 200,
+    "ms": 9,
+    "body": ""
+  },
+  {
+    "path": "/api/safes",
+    "status": 200,
+    "ms": 22,
+    "body": ""
+  },
+  {
+    "path": "/api/safes/dashboard",
+    "status": 200,
+    "ms": 18,
+    "body": ""
+  },
+  {
+    "path": "/api/security/locked-months",
+    "status": 200,
+    "ms": 11,
+    "body": ""
+  },
+  {
+    "path": "/api/settings/auto_add_delivery_to_salary",
+    "status": 200,
+    "ms": 15,
+    "body": ""
+  },
+  {
+    "path": "/api/settings/backup-interval",
+    "status": 200,
+    "ms": 11,
+    "body": ""
+  },
+  {
+    "path": "/api/settings/business_type",
+    "status": 200,
+    "ms": 15,
+    "body": ""
+  },
+  {
+    "path": "/api/settings/customer_menu_logo",
+    "status": 200,
+    "ms": 16,
+    "body": ""
+  },
+  {
+    "path": "/api/settings/gemini_api_key",
+    "status": 200,
+    "ms": 15,
+    "body": ""
+  },
+  {
+    "path": "/api/settings/kitchen_warning_time",
+    "status": 200,
+    "ms": 16,
+    "body": ""
+  },
+  {
+    "path": "/api/settings/login_background",
+    "status": 200,
+    "ms": 2,
+    "body": ""
+  },
+  {
+    "path": "/api/settings/pos_category_discounts",
+    "status": 200,
+    "ms": 13,
+    "body": ""
+  },
+  {
+    "path": "/api/settings/pos_global_discount",
+    "status": 200,
+    "ms": 15,
+    "body": ""
+  },
+  {
+    "path": "/api/settings/purchases_einvoice",
+    "status": 200,
+    "ms": 16,
+    "body": ""
+  },
+  {
+    "path": "/api/settings/receipt_code_page",
+    "status": 200,
+    "ms": 15,
+    "body": ""
+  },
+  {
+    "path": "/api/settings/receipt_code_page_internal",
+    "status": 200,
+    "ms": 15,
+    "body": ""
+  },
+  {
+    "path": "/api/settings/receipt_font_size",
+    "status": 200,
+    "ms": 16,
+    "body": ""
+  },
+  {
+    "path": "/api/settings/receipt_font_size_internal",
+    "status": 200,
+    "ms": 16,
+    "body": ""
+  },
+  {
+    "path": "/api/settings/receipt_font_weight",
+    "status": 200,
+    "ms": 16,
+    "body": ""
+  },
+  {
+    "path": "/api/settings/receipt_font_weight_internal",
+    "status": 200,
+    "ms": 14,
+    "body": ""
+  },
+  {
+    "path": "/api/settings/receipt_hide_prices_internal",
+    "status": 200,
+    "ms": 16,
+    "body": ""
+  },
+  {
+    "path": "/api/settings/receipt_hotline",
+    "status": 200,
+    "ms": 14,
+    "body": ""
+  },
+  {
+    "path": "/api/settings/receipt_logo",
+    "status": 200,
+    "ms": 15,
+    "body": ""
+  },
+  {
+    "path": "/api/settings/receipt_printer_width",
+    "status": 200,
+    "ms": 15,
+    "body": ""
+  },
+  {
+    "path": "/api/settings/receipt_printer_width_internal",
+    "status": 200,
+    "ms": 21,
+    "body": ""
+  },
+  {
+    "path": "/api/settings/receipt_reverse_arabic",
+    "status": 200,
+    "ms": 7,
+    "body": ""
+  },
+  {
+    "path": "/api/settings/receipt_reverse_arabic_internal",
+    "status": 200,
+    "ms": 9,
+    "body": ""
+  },
+  {
+    "path": "/api/settings/receipt_template",
+    "status": 200,
+    "ms": 12,
+    "body": ""
+  },
+  {
+    "path": "/api/settings/receipt_template_internal",
+    "status": 200,
+    "ms": 14,
+    "body": ""
+  },
+  {
+    "path": "/api/settings/sales_settings_config",
+    "status": 200,
+    "ms": 16,
+    "body": ""
+  },
+  {
+    "path": "/api/settings/system_background",
+    "status": 200,
+    "ms": 16,
+    "body": ""
+  },
+  {
+    "path": "/api/settings/system_name",
+    "status": 200,
+    "ms": 21,
+    "body": ""
+  },
+  {
+    "path": "/api/stock-batches",
+    "status": 200,
+    "ms": 33,
+    "body": ""
+  },
+  {
+    "path": "/api/suppliers",
+    "status": 200,
+    "ms": 17,
+    "body": ""
+  },
+  {
+    "path": "/api/suppliers-aging",
+    "status": 200,
+    "ms": 18,
+    "body": ""
+  },
+  {
+    "path": "/api/suppliers-dashboard",
+    "status": 200,
+    "ms": 26,
+    "body": ""
+  },
+  {
+    "path": "/api/suppliers-detailed-report",
+    "status": 200,
+    "ms": 36,
+    "body": ""
+  },
+  {
+    "path": "/api/suppliers-reports",
+    "status": 200,
+    "ms": 80,
+    "body": ""
+  },
+  {
+    "path": "/api/system-printers",
+    "status": 200,
+    "ms": 1733,
+    "body": ""
+  },
+  {
+    "path": "/api/system/datetime",
+    "status": 200,
+    "ms": 32,
+    "body": ""
+  },
+  {
+    "path": "/api/system/diagnostics",
+    "status": 200,
+    "ms": 34,
+    "body": ""
+  },
+  {
+    "path": "/api/system/health/print-logs",
+    "status": 200,
+    "ms": 27,
+    "body": ""
+  },
+  {
+    "path": "/api/system/health/schema-guard",
+    "status": 200,
+    "ms": 42,
+    "body": ""
+  },
+  {
+    "path": "/api/system/health/settings",
+    "status": 200,
+    "ms": 182,
+    "body": ""
+  },
+  {
+    "path": "/api/system/settings/payroll_advances_types",
+    "status": 200,
+    "ms": 7,
+    "body": ""
+  },
+  {
+    "path": "/api/system/settings/payroll_bonuses_types",
+    "status": 200,
+    "ms": 15,
+    "body": ""
+  },
+  {
+    "path": "/api/system/settings/payroll_deductions_types",
+    "status": 200,
+    "ms": 15,
+    "body": ""
+  },
+  {
+    "path": "/api/transaction-reasons",
+    "status": 200,
+    "ms": 18,
+    "body": ""
+  },
+  {
+    "path": "/api/transaction-types",
+    "status": 200,
+    "ms": 17,
+    "body": ""
+  },
+  {
+    "path": "/api/treasury/accounts",
+    "status": 200,
+    "ms": 21,
+    "body": ""
+  },
+  {
+    "path": "/api/treasury/audit-logs",
+    "status": 200,
+    "ms": 11,
+    "body": ""
+  },
+  {
+    "path": "/api/treasury/closings",
+    "status": 200,
+    "ms": 13,
+    "body": ""
+  },
+  {
+    "path": "/api/treasury/custodies",
+    "status": 200,
+    "ms": 26,
+    "body": ""
+  },
+  {
+    "path": "/api/treasury/custodies/dashboard",
+    "status": 200,
+    "ms": 20,
+    "body": ""
+  },
+  {
+    "path": "/api/treasury/custody-types",
+    "status": 200,
+    "ms": 14,
+    "body": ""
+  },
+  {
+    "path": "/api/treasury/dashboard",
+    "status": 200,
+    "ms": 21,
+    "body": ""
+  },
+  {
+    "path": "/api/treasury/settings",
+    "status": 200,
+    "ms": 10,
+    "body": ""
+  },
+  {
+    "path": "/api/user-logs",
+    "status": 200,
+    "ms": 22,
+    "body": ""
+  },
+  {
+    "path": "/api/users",
+    "status": 200,
+    "ms": 8,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/erp-gl/account-config",
+    "status": 200,
+    "ms": 19,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/erp-gl/auto-post/status",
+    "status": 200,
+    "ms": 28,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/erp-gl/gl-audit-logs",
+    "status": 200,
+    "ms": 15,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/fixed-assets",
+    "status": 200,
+    "ms": 9,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/hotel/dashboard",
+    "status": 200,
+    "ms": 11,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/hotel/guests",
+    "status": 200,
+    "ms": 12,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/hotel/housekeeping",
+    "status": 200,
+    "ms": 18,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/hotel/maintenance",
+    "status": 200,
+    "ms": 12,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/hotel/properties",
+    "status": 200,
+    "ms": 14,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/hotel/reservations",
+    "status": 200,
+    "ms": 16,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/hotel/room-types",
+    "status": 200,
+    "ms": 4,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/hotel/rooms",
+    "status": 200,
+    "ms": 12,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/hotel/service-orders",
+    "status": 200,
+    "ms": 17,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/hotel/services",
+    "status": 200,
+    "ms": 13,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/production/boms",
+    "status": 200,
+    "ms": 18,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/production/check-availability",
+    "status": 400,
+    "ms": 12,
+    "body": "{\"error\":\"productId is required\"}"
+  },
+  {
+    "path": "/api/v2/production/orders",
+    "status": 200,
+    "ms": 19,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/production/shared-products",
+    "status": 200,
+    "ms": 27,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/sales/contracts",
+    "status": 200,
+    "ms": 19,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/sales/core-products-available",
+    "status": 200,
+    "ms": 13,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/sales/deliveries",
+    "status": 200,
+    "ms": 23,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/sales/invoices",
+    "status": 200,
+    "ms": 16,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/sales/items/search",
+    "status": 200,
+    "ms": 25,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/sales/journals",
+    "status": 200,
+    "ms": 13,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/sales/orders",
+    "status": 200,
+    "ms": 20,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/sales/pos/preview",
+    "status": 200,
+    "ms": 12,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/sales/pos/status",
+    "status": 200,
+    "ms": 15,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/sales/price-lists",
+    "status": 200,
+    "ms": 17,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/sales/products",
+    "status": 200,
+    "ms": 22,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/sales/products/master-items",
+    "status": 200,
+    "ms": 7,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/sales/products/stats",
+    "status": 200,
+    "ms": 17,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/sales/quotations",
+    "status": 200,
+    "ms": 18,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/sales/reservations",
+    "status": 200,
+    "ms": 24,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/sales/returns",
+    "status": 200,
+    "ms": 13,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/sales/sales-reps",
+    "status": 200,
+    "ms": 8,
+    "body": ""
+  },
+  {
+    "path": "/api/v2/sales/settings",
+    "status": 200,
+    "ms": 16,
+    "body": ""
+  },
+  {
+    "path": "/api/vouchers",
+    "status": 200,
+    "ms": 5,
+    "body": ""
+  },
+  {
+    "path": "/api/warehouse-abc",
+    "status": 200,
+    "ms": 11,
+    "body": ""
+  },
+  {
+    "path": "/api/warehouse-dashboard",
+    "status": 200,
+    "ms": 39,
+    "body": ""
+  },
+  {
+    "path": "/api/warehouse-locations",
+    "status": 200,
+    "ms": 8,
+    "body": ""
+  },
+  {
+    "path": "/api/warehouse-settings",
+    "status": 200,
+    "ms": 13,
+    "body": ""
+  },
+  {
+    "path": "/api/warehouse-slow-moving",
+    "status": 200,
+    "ms": 18,
+    "body": ""
+  },
+  {
+    "path": "/api/warehouse-suppliers",
+    "status": 200,
+    "ms": 13,
+    "body": ""
+  },
+  {
+    "path": "/api/warehouse-transfers",
+    "status": 200,
+    "ms": 17,
+    "body": ""
+  },
+  {
+    "path": "/api/warehouse-turnover",
+    "status": 200,
+    "ms": 19,
+    "body": ""
+  },
+  {
+    "path": "/api/warehouse-types",
+    "status": 200,
+    "ms": 13,
+    "body": ""
+  },
+  {
+    "path": "/api/warehouse-valuation",
+    "status": 200,
+    "ms": 16,
+    "body": ""
+  },
+  {
+    "path": "/api/warehouses",
+    "status": 200,
+    "ms": 15,
+    "body": ""
+  },
+  {
+    "path": "/api/wastage-reasons",
+    "status": 200,
+    "ms": 17,
+    "body": ""
+  },
+  {
+    "path": "/api/web-orders",
+    "status": 200,
+    "ms": 18,
+    "body": ""
+  }
+]

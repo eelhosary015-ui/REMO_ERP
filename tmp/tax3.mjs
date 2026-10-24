@@ -1,0 +1,10 @@
+﻿import pg from "pg";
+import { config } from "dotenv";
+config({quiet:true});
+const c = new pg.Client({connectionString: process.env.DATABASE_URL});
+await c.connect();
+const r = await c.query("select key, account_id from account_config where key in ('tax_payable','vat_payable','input_vat','vat_input','output_vat','sales_revenue')");
+console.log(r.rows);
+const acc = await c.query("select id,code,name_ar from accounts where id in (select account_id from account_config where key in ('tax_payable','vat_payable','input_vat','vat_input'))");
+console.log(acc.rows);
+await c.end();

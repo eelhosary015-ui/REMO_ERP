@@ -1,0 +1,10 @@
+﻿import pg from "pg";
+import { config } from "dotenv";
+config({quiet:true});
+const c = new pg.Client({connectionString: process.env.DATABASE_URL});
+await c.connect();
+const r = await c.query(`select column_name, column_default, is_nullable from information_schema.columns where table_name='journal_entries' and column_name in ('date','status','period_id')`);
+console.table(r.rows);
+const t = await c.query(`select count(*)::int n from journal_entries where date is null`);
+console.log("null dates:", t.rows[0]);
+await c.end();

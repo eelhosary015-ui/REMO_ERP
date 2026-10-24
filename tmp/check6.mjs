@@ -1,0 +1,11 @@
+﻿import pg from "pg";
+import { config } from "dotenv";
+config({quiet:true});
+const url = process.env.DATABASE_URL.replace(/\/[^/]+$/, "/erp_system1_test");
+const c = new pg.Client({connectionString: url});
+await c.connect();
+const q = async (s) => (await c.query(s)).rows;
+console.log(await q("select key,account_id from account_config where key in ('income_summary','retained_earnings','sales_revenue','cash','accounts_payable')"));
+console.log(await q("select id,code,name_ar,type from accounts order by id"));
+console.log(await q("select to_regclass('public.financial_periods') fp, to_regclass('public.gl_audit_logs') gl, to_regclass('public.user_logs') ul"));
+await c.end();

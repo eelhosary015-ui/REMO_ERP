@@ -1,0 +1,9 @@
+﻿import fs from "node:fs";
+import pg from "pg";
+import { config } from "dotenv";
+config({quiet:true});
+const c = new pg.Client({connectionString: process.env.DATABASE_URL.replace(/\/[^/]+$/, "/erp_system1_test")});
+await c.connect();
+await c.query(fs.readFileSync("migrations/2026-10-20-treasury-gl-link.sql","utf8"));
+console.log("migration applied to test db");
+await c.end();

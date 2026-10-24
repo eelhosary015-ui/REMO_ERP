@@ -1,0 +1,92 @@
+
+  // ── Voucher issuance modal: presentation helpers + local draft ──────
+  const isReceiptVoucher = newVoucherType === "cash_in";
+  const voucherNow = new Date();
+  const voucherDateLabel = voucherNow.toLocaleDateString("ar-EG", { weekday: "long", day: "2-digit", month: "long", year: "numeric" });
+  const voucherTimeLabel = voucherNow.toLocaleTimeString("ar-EG", { hour: "2-digit", minute: "2-digit" });
+  const formatVoucherMoney = (value: number) =>
+    Number(value || 0).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+  // رقم مبدئي للعرض فقط — الرقم النهائي يُولَّد على الخادم عند الحفظ.
+  const voucherPreviewNo = (() => {
+    const year = voucherNow.getFullYear();
+    const prefix = isReceiptVoucher ? "RC" : "PV";
+    const used = transactions
+      .map((tx) => String((tx as any).voucher_number || ""))
+      .filter((value) => value.startsWith(`${prefix}-${year}-`))
+      .map((value) => Number(value.split("-").pop()))
+      .filter((value) => Number.isFinite(value) && value > 0);
+    const next = (used.length ? Math.max(...used) : 0) + 1;
+    return `${prefix}-${year}-${String(next).padStart(4, "0")}`;
+  })();
+
+  const selectedVoucherAccount = accounts.find((acc) => String(acc.id) === String(voucherForm.account_id));
+  const selectedAccountBalance = Number((selectedVoucherAccount as any)?.current_balance || 0);
+  const selectedPartyBalance = Number(
+    (voucherForm.client_type === "supplier" ? selectedSupplier?.balance : undefined) ??
+      (voucherForm.client_type === "customer" ? selectedCustomer?.balance : undefined) ??
+      0,
+  );
+
+  const voucherAccent = isReceiptVoucher
+    ? {
+        ring: "focus:border-emerald-500 focus:ring-emerald-500/15",
+        solid: "bg-emerald-600 hover:bg-emerald-700 shadow-emerald-600/25",
+        icon: "bg-emerald-600 shadow-emerald-600/25",
+        chip: "bg-emerald-100 text-emerald-800 border-emerald-200",
+        toggleActive: "bg-white text-emerald-700 shadow-sm ring-1 ring-emerald-200",
+      }
+    : {
+        ring: "focus:border-rose-500 focus:ring-rose-500/15",
+        solid: "bg-rose-600 hover:bg-rose-700 shadow-rose-600/25",
+        icon: "bg-rose-600 shadow-rose-600/25",
+        chip: "bg-rose-100 text-rose-800 border-rose-200",
+        toggleActive: "bg-white text-rose-700 shadow-sm ring-1 ring-rose-200",
+      };
+
+  const VOUCHER_DRAFT_KEY = "remo:treasury:voucher-draft";
+  const [draftNotice, setDraftNotice] = useState<string | null>(null);
+  const [draftAvailable, setDraftAvailable] = useState(false);
+
+  useEffect(() => {
+    if (!showNewVoucherModal) return;
+    try {
+      setDraftAvailable(!!localStorage.getItem(VOUCHER_DRAFT_KEY));
+    } catch {
+      setDraftAvailable(false);
+    }
+  }, [showNewVoucherModal]);
+
+  const saveVoucherDraft = () => {
+    try {
+      localStorage.setItem(VOUCHER_DRAFT_KEY, JSON.stringify({
+        type: newVoucherType,
+        form: voucherForm,
+        supplier: selectedSupplier,
+        customer: selectedCustomer,
+        employee: selectedEmployee,
+      }));
+      setDraftAvailable(true);
+      setDraftNotice("حُفظت المسودة على هذا الجهاز — لم يُنشأ سند مالي");
+      window.setTimeout(() => setDraftNotice(null), 4000);
+    } catch {
+      setDraftNotice("تعذّر حفظ المسودة على هذا الجهاز");
+    }
+  };
+
+  const restoreVoucherDraft = () => {
+    try {
+      const raw = localStorage.getItem(VOUCHER_DRAFT_KEY);
+      if (!raw) return;
+      const draft = JSON.parse(raw);
+      if (draft?.form) setVoucherForm((prev) => ({ ...prev, ...draft.form }));
+      if (draft?.type) setNewVoucherType(draft.type);
+      setSelectedSupplier(draft.supplier ?? null);
+      setSelectedCustomer(draft.customer ?? null);
+      setSelectedEmployee(draft.employee ?? null);
+      setDraftNotice("تم استعادة المسودة");
+      window.setTimeout(() => setDraftNotice(null), 3000);
+    } catch {
+      /* مسودة تالفة */
+    }
+  };

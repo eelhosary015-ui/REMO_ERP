@@ -1,0 +1,10 @@
+﻿import pg from "pg";
+import { config } from "dotenv";
+config({quiet:true});
+const c = new pg.Client({connectionString: process.env.DATABASE_URL});
+await c.connect();
+const r = await c.query("select column_name,data_type from information_schema.columns where table_name='cost_centers' order by ordinal_position");
+console.log(r.rows.map(x=>x.column_name+":"+x.data_type).join(", "));
+const row = await c.query("select * from cost_centers limit 1");
+console.log(row.rows[0]);
+await c.end();

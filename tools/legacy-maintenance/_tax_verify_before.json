@@ -1,0 +1,151 @@
+{
+  "suppliers": [
+    {
+      "id": 1,
+      "name": "شركة النور لتوريد الأقمشة",
+      "balance": "11224.00"
+    },
+    {
+      "id": 2,
+      "name": "الحصري",
+      "balance": "3500.00"
+    },
+    {
+      "id": 3,
+      "name": "مورد تجريبي",
+      "balance": "10200.00"
+    }
+  ],
+  "ingredients": [
+    {
+      "id": 1,
+      "name": "قماش Cotton",
+      "unit": "كجم",
+      "cost": "114.0000",
+      "avg_cost": "114.0000",
+      "last_purchase_price": "114.0000"
+    },
+    {
+      "id": 2,
+      "name": "خيط أبيض",
+      "unit": "كجم",
+      "cost": "91.2000",
+      "avg_cost": "91.2000",
+      "last_purchase_price": "91.2000"
+    },
+    {
+      "id": 3,
+      "name": "منتج كابتن ",
+      "unit": "وحدة",
+      "cost": "51.3000",
+      "avg_cost": "51.3000",
+      "last_purchase_price": "51.3000"
+    },
+    {
+      "id": 4,
+      "name": "ازر الحصري ",
+      "unit": "قطعة",
+      "cost": "50.0000",
+      "avg_cost": "50.0000",
+      "last_purchase_price": "50.0000"
+    },
+    {
+      "id": 5,
+      "name": "منتج الحصري ",
+      "unit": "وحدة",
+      "cost": "25.0000",
+      "avg_cost": "25.0000",
+      "last_purchase_price": "25.0000"
+    },
+    {
+      "id": 6,
+      "name": "قماش تجريبي ",
+      "unit": "متر",
+      "cost": "100.0000",
+      "avg_cost": "100.0000",
+      "last_purchase_price": "100.0000"
+    }
+  ],
+  "inventory": [
+    {
+      "id": 1,
+      "warehouse_id": 1,
+      "ingredient_id": 1,
+      "quantity": "90.0000",
+      "avg_cost": "114.0000",
+      "last_cost": "114.0000"
+    },
+    {
+      "id": 2,
+      "warehouse_id": 1,
+      "ingredient_id": 2,
+      "quantity": "10.0000",
+      "avg_cost": "91.2000",
+      "last_cost": "91.2000"
+    },
+    {
+      "id": 3,
+      "warehouse_id": 1,
+      "ingredient_id": 3,
+      "quantity": "16.0000",
+      "avg_cost": "51.3000",
+      "last_cost": "51.3000"
+    },
+    {
+      "id": 4,
+      "warehouse_id": 1,
+      "ingredient_id": 4,
+      "quantity": "0.0000",
+      "avg_cost": "0.0000",
+      "last_cost": "0.0000"
+    },
+    {
+      "id": 5,
+      "warehouse_id": 2,
+      "ingredient_id": 4,
+      "quantity": "50.0000",
+      "avg_cost": "50.0000",
+      "last_cost": "50.0000"
+    },
+    {
+      "id": 6,
+      "warehouse_id": 1,
+      "ingredient_id": 5,
+      "quantity": "41.0000",
+      "avg_cost": "25.0000",
+      "last_cost": "25.0000"
+    },
+    {
+      "id": 7,
+      "warehouse_id": 1,
+      "ingredient_id": 6,
+      "quantity": "2.0000",
+      "avg_cost": "100.0000",
+      "last_cost": "100.0000"
+    },
+    {
+      "id": 8,
+      "warehouse_id": 2,
+      "ingredient_id": 6,
+      "quantity": "0.0000",
+      "avg_cost": "0.0000",
+      "last_cost": "0.0000"
+    },
+    {
+      "id": 9,
+      "warehouse_id": 3,
+      "ingredient_id": 6,
+      "quantity": "200.0000",
+      "avg_cost": "100.0000",
+      "last_cost": "100.0000"
+    },
+    {
+      "id": 10,
+      "warehouse_id": 4,
+      "ingredient_id": 6,
+      "quantity": "0.0000",
+      "avg_cost": "0.0000",
+      "last_cost": "0.0000"
+    }
+  ]
+}

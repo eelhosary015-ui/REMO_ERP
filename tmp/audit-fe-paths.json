@@ -1,0 +1,3049 @@
+[
+  {
+    "path": "/api/:id",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/:id/:id",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/account-config",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/account-config/:id",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/accounts",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/accounts/:id",
+    "methods": [
+      "DELETE",
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/accounts/bulk",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/adjustment-reasons",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/approvals",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/approvals/:id/approve",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/approvals/:id/cancel",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/approvals/:id/reject",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/approvals/dashboard",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/approvals/history",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/approvals/pending-count",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/approvals/settings",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/approvals/settings/:id",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/attendance",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/attendance/:id",
+    "methods": [
+      "DELETE",
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/attendance/import",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/attendance/penalty",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/backup",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/backups/create",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/backups/list",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/backups/restore/:id",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/bank-accounts",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/bank-reconciliation/match",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/bank-reconciliation/transactions",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/banks/accounts",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/banks/accounts/:id",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/banks/settings",
+    "methods": [
+      "GET",
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/banks/transactions",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/banks/transfers",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/branches",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/branches/:id",
+    "methods": [
+      "PUT",
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/branches/:id/tables-status",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/budget-vs-actual",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/budgets",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/categories/:id",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/companies",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/complaints",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/complaints/:id/resolve",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/cost-centers",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/costs",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/costs/:id",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/costs/:id/status",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/costs/activity-logs",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/costs/approve",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/costs/budgets",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/costs/budgets/:id",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/costs/calculate",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/costs/centers",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/costs/centers/:id",
+    "methods": [
+      "PUT",
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/costs/clear-all-data",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/costs/dashboard",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/costs/integrations/customers",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/costs/integrations/employees",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/costs/integrations/ingredients",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/costs/integrations/products",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/costs/integrations/suppliers",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/costs/items",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/costs/items/:id",
+    "methods": [
+      "PUT",
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/costs/products",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/costs/products/:id",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/costs/recipe-costing/all-ingredients",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/costs/recipe-costing/calculate/:id",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/costs/recipe-costing/history/:id",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/costs/recipe-costing/save",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/costs/recipe-costing/update-recipe-ingredients",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/costs/reports/product-costs",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/costs/save",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/costs/settings",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/costs/simulate",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/customers",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/customers/:id",
+    "methods": [
+      "PUT",
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/customers/:id/transactions",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/customers/transactions",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/db-stats",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/db/seed-demo",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/delivery-areas",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/delivery-areas/:id",
+    "methods": [
+      "PUT",
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/delivery/drivers",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/delivery/orders",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/employee-penalties",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/employee-penalties/:id/cancel",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/employees/:id/penalties",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/enterprise/command-center",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/enterprise/notifications",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/enterprise/notifications/:id/read",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/enterprise/notifications/read-all",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/enterprise/search",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/enterprise/stock",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/enterprise/warehouse-transfers",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/enterprise/warehouse-transfers/:id/approve",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/enterprise/warehouse-transfers/:id/cancel",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/enterprise/warehouse-transfers/:id/dispatch",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/enterprise/warehouse-transfers/:id/receive",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/enterprise/warehouse-transfers/:id/reject",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/enterprise/warehouse-transfers/source-stock/:id",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/enterprise/workflows",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/enterprise/workflows/:id",
+    "methods": [
+      "PUT",
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/financial-periods",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/financial-periods/:id/close",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/financial-periods/:id/preflight",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/financial-periods/:id/reopen",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/financial-periods/:id/toggle",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/fingerprint-devices",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/fingerprint-devices/:id",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/fingerprint-devices/:id/sync",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/fiscal-years",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/fiscal-years/:id/close-and-carryover",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/fiscal-years/:id/closing-preview",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/gl-audit",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/gl-dashboard",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/health",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/hr/:id/:id",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/hr/annual-increases",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/hr/annual-increases/:id/approve",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/hr/annual-increases/:id/reject",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/hr/annual-increases/:id/update-pct",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/hr/branches",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/hr/branches-status",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/hr/branches/:id/dynamic-qr",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/hr/clearance-records",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/hr/custody",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/hr/custody/:id",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/hr/custody/:id/return",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/hr/custody/store",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/hr/custody/store/:id",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/hr/dashboard",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/hr/departments",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/hr/documents",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/hr/documents/:id",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/hr/employee-portal/admin/employees-report",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/hr/employee-portal/admin/live-attendance",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/hr/employee-portal/admin/manual-attendance",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/hr/employee-portal/admin/payroll-summary",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/hr/employee-portal/my-requests",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/hr/employee-portal/notifications",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/hr/employee-portal/notifications/read",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/hr/employee-portal/profile",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/hr/employee-portal/submit-request",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/hr/employee-warnings",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/hr/employee-warnings/:id",
+    "methods": [
+      "PUT",
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/hr/employees",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/hr/employees/:id",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/hr/employees/:id/clearance",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/hr/employees/:id/deduct-leave",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/hr/employees/:id/elements",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/hr/employees/:id/fingerprint-access",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/hr/employees/:id/reactivate",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/hr/employees/:id/status",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/hr/employees/:id/status-history",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/hr/employees/bulk-actions",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/hr/evaluations",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/hr/evaluations/:id",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/hr/leave-requests",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/hr/leave-requests/:id",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/hr/notifications/send",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/hr/notifications/sent-history",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/hr/penalties",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/hr/penalties/calculate",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/hr/portal-requests",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/hr/portal-requests/:id/respond",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/hr/production-bonuses",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/hr/production-bonuses/:id/approve",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/hr/settings",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/hr/shifts",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/hr/training-courses",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/hr/whatsapp/client/logout",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/hr/whatsapp/client/start",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/hr/whatsapp/client/status",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/hr/whatsapp/config",
+    "methods": [
+      "POST",
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/hr/whatsapp/logs",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/hr/whatsapp/send",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/ingredients",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/ingredients/:id",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/ingredients/import",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/ingredients:id",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/inventory-adjustments",
+    "methods": [
+      "POST",
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/inventory-adjustments/:id",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/inventory-adjustments/:id/approve",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/inventory-items",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/inventory-items:id",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/inventory-movements",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/inventory-notifications",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/inventory-notifications/:id/read",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/inventory-notifications/read-all",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/inventory-transactions",
+    "methods": [
+      "POST",
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/inventory-transactions/:id",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/inventory-transactions/:id/approve",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/inventory-wastage",
+    "methods": [
+      "POST",
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/inventory-wastage/:id",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/inventory-wastage/:id/approve",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/inventory/counts",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/inventory/counts/:id",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/inventory/counts/:id/approve",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/inventory/counts/:id/settle-item",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/inventory/delivery-notes",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/inventory/delivery-notes/:id",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/inventory/item-details/:id",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/inventory/items",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/inventory/product-bundles",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/inventory/product-bundles/:id",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/inventory/putaway-rules",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/inventory/putaway-rules/:id",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/inventory/reports/kpis",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/inventory/requests",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/inventory/requests/:id",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/inventory/sales-orders",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/inventory/sales-orders/:id",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/inventory/stock",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/inventory/stock-entries",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/inventory/stock-entries/:id",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/inventory/stock-intelligence",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/inventory/update-location",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/inventory/warehouses",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/journal-entries",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/journal-entries/:id",
+    "methods": [
+      "PUT",
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/kitchen/orders",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/kitchen/orders/:id/status",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/network/ip",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/orders/:id",
+    "methods": [
+      "GET",
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/orders/:id/cancel",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/orders/:id/checkout",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/orders/:id/items",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/orders/:id/print",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/payroll/:id/:id",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/payroll/advances",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/payroll/bonuses",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/payroll/deductions",
+    "methods": [
+      "POST",
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/payroll/deductions/:id",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/payroll/elements/:id",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/payroll/runs/:id/close",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/payroll/runs/:id/pay",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/payroll/runs/:id/payments/:id/reverse",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/payroll/runs/:id/reverse",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/payroll/runs/draft",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/pos/data",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/pos/order",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/pos/orders-for-void",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/pos/shifts",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/pos/shifts/:id",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/pos/shifts/:id/approve-variance",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/pos/shifts/:id/close",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/pos/shifts/open",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/pos/shifts/options",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/printers",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/printers/:id",
+    "methods": [
+      "PUT",
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/printers/:id/test",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/products",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/products/:id",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/products/manage-data",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/products/manage-data:id",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/purchase-orders",
+    "methods": [
+      "POST",
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/purchase-orders/:id",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/purchase-quotations",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/purchase-quotations/:id",
+    "methods": [
+      "DELETE",
+      "PUT",
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/purchase-receipts",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/purchase-requests",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/purchase-requests/:id",
+    "methods": [
+      "PUT",
+      "DELETE",
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/purchase-requests/:id/approve",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/purchases",
+    "methods": [
+      "POST",
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/purchases/:id",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/purchases/:id/three-way-match",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/purchases/dashboard",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/realestate/properties",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/realestate/properties/:id",
+    "methods": [
+      "PUT",
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/realestate/reports",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/realestate/settings",
+    "methods": [
+      "GET",
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/reports/branch/delivery",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/reports/branch/kitchen",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/reports/branch/web-orders",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/reports/orders/modifications",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/reports/pos/detailed",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/restore",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/returns",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/returns/:id",
+    "methods": [
+      "PUT",
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/returns/next-number",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/safes",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/safes/${selectedSafe",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/safes/:id/active-shift",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/safes/:id/close-shift",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/safes/:id/open-shift",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/safes/:id/reset",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/safes/:id/transactions",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/safes/branch/:id/active-shift",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/safes/dashboard",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/safes/transactions",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/security/locked-months",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/security/toggle-month-lock",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/settings",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/settings/:id",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/settings/auto_add_delivery_to_salary",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/settings/backup-interval",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/settings/business_type",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/settings/customer_menu_logo",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/settings/gemini_api_key",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/settings/kitchen_warning_time",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/settings/login_background",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/settings/pos_category_discounts",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/settings/pos_global_discount",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/settings/purchases_einvoice",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/settings/receipt_code_page",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/settings/receipt_code_page_internal",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/settings/receipt_font_size",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/settings/receipt_font_size_internal",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/settings/receipt_font_weight",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/settings/receipt_font_weight_internal",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/settings/receipt_hide_prices_internal",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/settings/receipt_hotline",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/settings/receipt_logo",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/settings/receipt_printer_width",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/settings/receipt_printer_width_internal",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/settings/receipt_reverse_arabic",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/settings/receipt_reverse_arabic_internal",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/settings/receipt_template",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/settings/receipt_template_internal",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/settings/sales_settings_config",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/settings/system_background",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/settings/system_name",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/stock-batches",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/supplier-ratings",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/supplier-ratings/:id",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/suppliers",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/suppliers-aging",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/suppliers-dashboard",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/suppliers-detailed-report",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/suppliers-reports",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/suppliers/:id",
+    "methods": [
+      "PUT",
+      "GET",
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/suppliers/:id/aging",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/suppliers/:id/bank-accounts",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/suppliers/:id/bank-accounts/:id",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/suppliers/:id/contacts",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/suppliers/:id/contacts/:id",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/suppliers/:id/documents",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/suppliers/:id/evaluations",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/suppliers/:id/payments",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/suppliers/:id/statement${qs ",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/suppliers/:id/statement",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/suppliers/:id/transactions",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/system-printers",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/system/datetime",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/system/diagnostics",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/system/health/print-logs",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/system/health/print-logs/retry",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/system/health/schema-guard",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/system/health/schema-guard/run",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/system/health/settings",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/system/settings",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/system/settings/:id",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/system/settings/payroll_advances_types",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/system/settings/payroll_bonuses_types",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/system/settings/payroll_deductions_types",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/transaction-reasons",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/transaction-types",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/treasury/accounts",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/treasury/accounts/:id",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/treasury/accounts/:id/reset",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/treasury/audit-logs",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/treasury/closings",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/treasury/closings/:id/reopen",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/treasury/custodies",
+    "methods": [
+      "POST",
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/treasury/custodies/:id",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/treasury/custodies/:id/approve",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/treasury/custodies/:id/clear",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/treasury/custodies/:id/expenses/:id",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/treasury/custodies/:id/extend",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/treasury/custodies/:id/issue",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/treasury/custodies/:id/items/:id/return",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/treasury/custodies/:id/pay",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/treasury/custodies/:id/reject",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/treasury/custodies/:id/send-reminder",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/treasury/custodies/:id/settle",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/treasury/custodies/dashboard",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/treasury/custody-types",
+    "methods": [
+      "POST",
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/treasury/custody-types/:id",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/treasury/dashboard",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/treasury/settings",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/treasury/transactions/:id/cancel",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/user-logs",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/users",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/users/:id",
+    "methods": [
+      "PUT",
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/v2/erp-gl/account-config",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/v2/erp-gl/auto-post/status",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/v2/erp-gl/budgets/recalculate",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/erp-gl/gl-audit-logs",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/v2/fixed-assets",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/fixed-assets/:id",
+    "methods": [
+      "PUT",
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/v2/fixed-assets/:id/depreciate",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/charge-to-room",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/dashboard",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/folios/:id",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/folios/charge",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/guests",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/guests/:id",
+    "methods": [
+      "PUT",
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/guests/:id/documents",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/guests/:id/profile",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/guests/documents",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/guests/documents/:id",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/housekeeping",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/housekeeping/:id",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/maintenance",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/maintenance/:id",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/night-audits/run",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/night-audits:id",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/properties",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/properties/:id",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/reports/guest-balances:id",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/reports/police-registry:id",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/reports/revenue:id",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/reservations",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/reservations/:id/checkin",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/reservations/:id/checkout",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/reservations/:id/move-room",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/room-types",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/room-types/:id",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/rooms",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/rooms/:id",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/rooms/:id/occupied-details",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/rooms/:id/status",
+    "methods": [
+      "PATCH"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/seed-data",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/service-orders",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/service-orders/:id/status",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/services",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/hotel/services/:id",
+    "methods": [
+      "PUT",
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/v2/production/boms",
+    "methods": [
+      "GET",
+      "POST",
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/v2/production/boms/:id",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/v2/production/check-availability",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/v2/production/orders",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/production/orders/:id/execute",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/production/shared-products",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/contracts",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/core-products-available",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/deliveries",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/deliveries/:id",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/deliveries/:id/confirm",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/invoices",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/invoices/:id",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/invoices/:id/cancel",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/invoices/:id/payments",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/items/search",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/journals",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/orders",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/orders/:id",
+    "methods": [
+      "PUT",
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/orders/:id/confirm-and-deliver",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/pos/bulk-toggle-sales",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/pos/preview",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/pos/status",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/pos/toggle-sales-availability",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/price-lists",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/products",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/products/:id",
+    "methods": [
+      "DELETE",
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/products/:id/movement",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/products/:id/toggle-status",
+    "methods": [
+      "PATCH"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/products/master-items",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/products/stats",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/quotations",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/quotations/:id",
+    "methods": [
+      "PUT",
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/reservations",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/reservations/:id/cancel",
+    "methods": [
+      "PATCH"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/reservations/:id/release",
+    "methods": [
+      "PATCH"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/reset-demo-data",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/returns",
+    "methods": [
+      "POST",
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/returns/:id",
+    "methods": [
+      "PUT",
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/returns/invoices/:id/return-details",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/sales-reps",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/v2/sales/settings",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/vouchers",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/vouchers/:id",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/warehouse-abc",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/warehouse-dashboard",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/warehouse-locations",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/warehouse-settings",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/warehouse-settings/:id",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/warehouse-slow-moving",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/warehouse-suppliers",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/warehouse-suppliers/:id",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/warehouse-transfers",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/warehouse-transfers/:id/status",
+    "methods": [
+      "PUT"
+    ]
+  },
+  {
+    "path": "/api/warehouse-turnover",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/warehouse-types",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/warehouse-valuation",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/warehouses",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/warehouses/:id",
+    "methods": [
+      "DELETE"
+    ]
+  },
+  {
+    "path": "/api/warehouses/link-module",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/wastage-reasons",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/web-orders",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "path": "/api/web-orders/:id/confirm",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "path": "/api/web-orders/:id/reject",
+    "methods": [
+      "POST"
+    ]
+  }
+]

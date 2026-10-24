@@ -1,0 +1,23 @@
+# Removed copy folders — Phase 1 batch (أ) — 2026-10-13
+# These directories were NOT tracked by git (ignored by .gitignore), so this manifest is the only record of their contents.
+# Total reclaimed: 58.36 MB across 19 files.
+
+.continue - Copy/agents/new-config-1.yaml
+.continue - Copy/agents/new-config-2.yaml
+.continue - Copy/agents/new-config-3.yaml
+.continue - Copy/agents/new-config-4.yaml
+.continue - Copy/agents/new-config-5.yaml
+.continue - Copy/agents/new-config.yaml
+dist - Copy/assets/charts-vendor-B3SUQgFe.js
+dist - Copy/assets/charts-vendor-BRhdbZOk.js
+dist - Copy/assets/charts-vendor-CGSWul1B.js
+dist - Copy/assets/charts-vendor-Cg0zx9Om.js
+dist - Copy/cost-routes.validation.js
+dist - Copy/index.html
+dist - Copy/server.cjs
+dist - Copy/server.cjs.map
+dist - Copy/zoz9-daily-journal-module.zip
+dist - Copy/zoz9-fix-duplicate-columns.zip
+dist - Copy/zoz9-settings-save-fix.zip
+dist - Copy/zoz9-unified-settings-payroll.zip
+uploads - Copy/1788604459423-944528124.pdf

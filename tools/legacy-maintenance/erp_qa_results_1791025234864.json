@@ -1,0 +1,627 @@
+{
+  "timestamp": "2026-10-03T11:00:34.864Z",
+  "summary": {
+    "total": 58,
+    "pass": 41,
+    "fail": 17,
+    "blocked": 0,
+    "warn": 13
+  },
+  "bugs": [
+    {
+      "id": "CUST-001",
+      "severity": "HIGH",
+      "msg": "Create customer failed",
+      "detail": "{\"error\":\"column \\\"email\\\" of relation \\\"customers\\\" does not exist\"}",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "id": "INV-002",
+      "severity": "HIGH",
+      "msg": "Inventory movements endpoint failed",
+      "detail": "",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "id": "INV-004",
+      "severity": "HIGH",
+      "msg": "Inventory adjustment endpoint failed",
+      "detail": "{\"error\":\"تعذر تسجيل حركة المخزون: value \\\"1791025229389\\\" is out of range for type integer\"}",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "id": "INV-007",
+      "severity": "HIGH",
+      "msg": "Warehouse \"المخزن التشغيلي - الزقازيق\" (ID=3) has NEGATIVE stock value: -2235.6925 EGP",
+      "detail": "",
+      "expected": "≥ 0",
+      "actual": "-2235.6925"
+    },
+    {
+      "id": "INV-007",
+      "severity": "HIGH",
+      "msg": "Warehouse \"المخزن التشغيلي - فطير زمان\" (ID=7) has NEGATIVE stock value: -3432.751 EGP",
+      "detail": "",
+      "expected": "≥ 0",
+      "actual": "-3432.751"
+    },
+    {
+      "id": "MFG-002",
+      "severity": "CRITICAL",
+      "msg": "Production order execution FAILED",
+      "detail": "{\"error\":\"تعذر تسجيل حركة المخزون: value too long for type character varying(100)\"}",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "id": "COST-002",
+      "severity": "MEDIUM",
+      "msg": "COST-002: Cost centers — failed (400)",
+      "detail": "",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "id": "COST-003",
+      "severity": "MEDIUM",
+      "msg": "COST-003: Operating costs — failed (400)",
+      "detail": "",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "id": "COST-005",
+      "severity": "MEDIUM",
+      "msg": "COST-005: Cost allocations — failed (400)",
+      "detail": "",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "id": "SALES-001",
+      "severity": "HIGH",
+      "msg": "Sales orders endpoint failed",
+      "detail": "{\"error\":\"NOT_FOUND\",\"message\":\"مسار API غير موجود: GET /api/sales/orders\"}",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "id": "SALES-002",
+      "severity": "HIGH",
+      "msg": "Sales order creation failed",
+      "detail": "{\"error\":\"NOT_FOUND\",\"message\":\"مسار API غير موجود: POST /api/sales/orders\"}",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "id": "POS-001",
+      "severity": "HIGH",
+      "msg": "POS sessions endpoint failed",
+      "detail": "",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "id": "POS-002",
+      "severity": "HIGH",
+      "msg": "POS orders endpoint failed",
+      "detail": "",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "id": "POS-003",
+      "severity": "HIGH",
+      "msg": "POS sale creation failed",
+      "detail": "{\"error\":\"NOT_FOUND\",\"message\":\"مسار API غير موجود: POST /api/pos/orders\"}",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "id": "ACC-002",
+      "severity": "HIGH",
+      "msg": "Journal entries endpoint failed",
+      "detail": "",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "id": "DB-003",
+      "severity": "HIGH",
+      "msg": "Warehouse \"المخزن التشغيلي - الزقازيق\" (ID=3) has NEGATIVE stock_value: -2235.6925 EGP",
+      "detail": "",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "id": "DB-003",
+      "severity": "HIGH",
+      "msg": "Warehouse \"المخزن التشغيلي - فطير زمان\" (ID=7) has NEGATIVE stock_value: -3432.751 EGP",
+      "detail": "",
+      "expected": "",
+      "actual": ""
+    }
+  ],
+  "log": [
+    {
+      "result": "PASS",
+      "id": "SYS-001",
+      "msg": "Server responding on port 3000",
+      "detail": null
+    },
+    {
+      "result": "PASS",
+      "id": "SYS-002",
+      "msg": "Warehouses endpoint OK (18 warehouses)",
+      "detail": null
+    },
+    {
+      "result": "PASS",
+      "id": "SYS-003",
+      "msg": "Products endpoint OK (290 products)",
+      "detail": null
+    },
+    {
+      "result": "PASS",
+      "id": "SYS-004",
+      "msg": "Customers endpoint OK (9 customers)",
+      "detail": null
+    },
+    {
+      "result": "PASS",
+      "id": "SYS-005",
+      "msg": "Ingredients endpoint OK (165 ingredients)",
+      "detail": null
+    },
+    {
+      "result": "PASS",
+      "id": "SUP-001",
+      "msg": "Supplier created (ID=36)",
+      "detail": null
+    },
+    {
+      "result": "PASS",
+      "id": "SUP-002",
+      "msg": "Duplicate supplier correctly rejected (409)",
+      "detail": null
+    },
+    {
+      "result": "PASS",
+      "id": "SUP-003",
+      "msg": "Get supplier by ID correct",
+      "detail": null
+    },
+    {
+      "result": "PASS",
+      "id": "SUP-004",
+      "msg": "Supplier search finds test supplier by name prefix",
+      "detail": null
+    },
+    {
+      "result": "PASS",
+      "id": "SUP-005",
+      "msg": "Empty supplier name rejected (status=400)",
+      "detail": null
+    },
+    {
+      "result": "FAIL",
+      "severity": "HIGH",
+      "id": "CUST-001",
+      "msg": "Create customer failed",
+      "detail": "{\"error\":\"column \\\"email\\\" of relation \\\"customers\\\" does not exist\"}",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "result": "WARN",
+      "id": "CUST-001",
+      "msg": "Using existing customer ID=20 as fallback",
+      "detail": ""
+    },
+    {
+      "result": "PASS",
+      "id": "CUST-002",
+      "msg": "Duplicate customer rejected (status=500)",
+      "detail": null
+    },
+    {
+      "result": "PASS",
+      "id": "ING-001",
+      "msg": "Ingredient created (ID=181)",
+      "detail": null
+    },
+    {
+      "result": "PASS",
+      "id": "PROD-001",
+      "msg": "Finished product created (ID=304)",
+      "detail": null
+    },
+    {
+      "result": "PASS",
+      "id": "PO-001",
+      "msg": "Purchase order created (ID=75, Total=4000 EGP, 20 KG @ 200 EGP/KG)",
+      "detail": null
+    },
+    {
+      "result": "PASS",
+      "id": "PO-002",
+      "msg": "PO list endpoint OK (44 orders)",
+      "detail": null
+    },
+    {
+      "result": "PASS",
+      "id": "GRN-001",
+      "msg": "GRN created (ID=74)",
+      "detail": null
+    },
+    {
+      "result": "PASS",
+      "id": "GRN-002",
+      "msg": "Stock correctly increased by 20 KG after GRN (0 → 20)",
+      "detail": null
+    },
+    {
+      "result": "PASS",
+      "id": "SUP-006",
+      "msg": "Supplier balance retrieved: 0 EGP",
+      "detail": null
+    },
+    {
+      "result": "WARN",
+      "id": "SUP-007",
+      "msg": "Supplier total_purchases is 0 — purchase may not be linked yet",
+      "detail": ""
+    },
+    {
+      "result": "PASS",
+      "id": "INV-001",
+      "msg": "Inventory items for warehouse 1: 13 items",
+      "detail": null
+    },
+    {
+      "result": "FAIL",
+      "severity": "HIGH",
+      "id": "INV-002",
+      "msg": "Inventory movements endpoint failed",
+      "detail": "",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "result": "FAIL",
+      "severity": "HIGH",
+      "id": "INV-004",
+      "msg": "Inventory adjustment endpoint failed",
+      "detail": "{\"error\":\"تعذر تسجيل حركة المخزون: value \\\"1791025229389\\\" is out of range for type integer\"}",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "result": "PASS",
+      "id": "INV-005",
+      "msg": "Negative stock adjustment rejected (status=500)",
+      "detail": null
+    },
+    {
+      "result": "WARN",
+      "id": "INV-006",
+      "msg": "Warehouse transfer endpoint not available at expected paths",
+      "detail": "{\"error\":\"NOT_FOUND\",\"message\":\"مسار API غير موجود: POST /api/inventory/transfer\"}"
+    },
+    {
+      "result": "FAIL",
+      "severity": "HIGH",
+      "id": "INV-007",
+      "msg": "Warehouse \"المخزن التشغيلي - الزقازيق\" (ID=3) has NEGATIVE stock value: -2235.6925 EGP",
+      "detail": "",
+      "expected": "≥ 0",
+      "actual": "-2235.6925"
+    },
+    {
+      "result": "FAIL",
+      "severity": "HIGH",
+      "id": "INV-007",
+      "msg": "Warehouse \"المخزن التشغيلي - فطير زمان\" (ID=7) has NEGATIVE stock value: -3432.751 EGP",
+      "detail": "",
+      "expected": "≥ 0",
+      "actual": "-3432.751"
+    },
+    {
+      "result": "PASS",
+      "id": "BOM-001",
+      "msg": "BOM created (ID=bom-1791025230429) — 1 unit requires 0.5 KG",
+      "detail": null
+    },
+    {
+      "result": "PASS",
+      "id": "BOM-002",
+      "msg": "BOM list OK (6 BOMs)",
+      "detail": null
+    },
+    {
+      "result": "PASS",
+      "id": "MFG-001",
+      "msg": "Production order created (ID=28, qty=10 units)",
+      "detail": null
+    },
+    {
+      "result": "FAIL",
+      "severity": "CRITICAL",
+      "id": "MFG-002",
+      "msg": "Production order execution FAILED",
+      "detail": "{\"error\":\"تعذر تسجيل حركة المخزون: value too long for type character varying(100)\"}",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "result": "PASS",
+      "id": "MFG-005",
+      "msg": "Duplicate production execution rejected (status=400)",
+      "detail": null
+    },
+    {
+      "result": "PASS",
+      "id": "COST-001",
+      "msg": "COST-001: Main costs endpoint — OK (object records)",
+      "detail": null
+    },
+    {
+      "result": "FAIL",
+      "severity": "MEDIUM",
+      "id": "COST-002",
+      "msg": "COST-002: Cost centers — failed (400)",
+      "detail": "",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "result": "FAIL",
+      "severity": "MEDIUM",
+      "id": "COST-003",
+      "msg": "COST-003: Operating costs — failed (400)",
+      "detail": "",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "result": "PASS",
+      "id": "COST-004",
+      "msg": "COST-004: Cost items — OK (object records)",
+      "detail": null
+    },
+    {
+      "result": "FAIL",
+      "severity": "MEDIUM",
+      "id": "COST-005",
+      "msg": "COST-005: Cost allocations — failed (400)",
+      "detail": "",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "result": "FAIL",
+      "severity": "HIGH",
+      "id": "SALES-001",
+      "msg": "Sales orders endpoint failed",
+      "detail": "{\"error\":\"NOT_FOUND\",\"message\":\"مسار API غير موجود: GET /api/sales/orders\"}",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "result": "FAIL",
+      "severity": "HIGH",
+      "id": "SALES-002",
+      "msg": "Sales order creation failed",
+      "detail": "{\"error\":\"NOT_FOUND\",\"message\":\"مسار API غير موجود: POST /api/sales/orders\"}",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "result": "WARN",
+      "id": "SALES-003",
+      "msg": "Sales invoices endpoint not available at /api/sales/invoices",
+      "detail": ""
+    },
+    {
+      "result": "WARN",
+      "id": "SALES-004",
+      "msg": "Sales quotations endpoint not available",
+      "detail": ""
+    },
+    {
+      "result": "WARN",
+      "id": "SALES-005",
+      "msg": "Customer detail not available by ID",
+      "detail": ""
+    },
+    {
+      "result": "FAIL",
+      "severity": "HIGH",
+      "id": "POS-001",
+      "msg": "POS sessions endpoint failed",
+      "detail": "",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "result": "FAIL",
+      "severity": "HIGH",
+      "id": "POS-002",
+      "msg": "POS orders endpoint failed",
+      "detail": "",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "result": "FAIL",
+      "severity": "HIGH",
+      "id": "POS-003",
+      "msg": "POS sale creation failed",
+      "detail": "{\"error\":\"NOT_FOUND\",\"message\":\"مسار API غير موجود: POST /api/pos/orders\"}",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "result": "PASS",
+      "id": "POS-005",
+      "msg": "POS products via /api/products?show_in_pos=true OK",
+      "detail": null
+    },
+    {
+      "result": "PASS",
+      "id": "TRES-001",
+      "msg": "Safes endpoint OK (7 safes)",
+      "detail": null
+    },
+    {
+      "result": "WARN",
+      "id": "TRES-002",
+      "msg": "Safe detail by ID not available",
+      "detail": ""
+    },
+    {
+      "result": "WARN",
+      "id": "TRES-003",
+      "msg": "Treasury transactions endpoint not available at expected paths",
+      "detail": ""
+    },
+    {
+      "result": "WARN",
+      "id": "TRES-004",
+      "msg": "Safe transfer endpoint not available (status=404)",
+      "detail": ""
+    },
+    {
+      "result": "PASS",
+      "id": "ACC-001",
+      "msg": "Chart of accounts OK (23 accounts)",
+      "detail": null
+    },
+    {
+      "result": "FAIL",
+      "severity": "HIGH",
+      "id": "ACC-002",
+      "msg": "Journal entries endpoint failed",
+      "detail": "",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "result": "WARN",
+      "id": "ACC-005",
+      "msg": "Accounting integration hub endpoint not available",
+      "detail": ""
+    },
+    {
+      "result": "PASS",
+      "id": "EDGE-001",
+      "msg": "Empty PO rejected (400)",
+      "detail": null
+    },
+    {
+      "result": "PASS",
+      "id": "EDGE-002",
+      "msg": "Negative price product rejected (500)",
+      "detail": null
+    },
+    {
+      "result": "WARN",
+      "id": "EDGE-003",
+      "msg": "Invalid date was accepted — server may coerce dates",
+      "detail": ""
+    },
+    {
+      "result": "PASS",
+      "id": "EDGE-004",
+      "msg": "Zero quantity GRN rejected (500)",
+      "detail": null
+    },
+    {
+      "result": "PASS",
+      "id": "FILTER-001",
+      "msg": "Filter OK: Supplier search by prefix (1 results)",
+      "detail": null
+    },
+    {
+      "result": "PASS",
+      "id": "FILTER-002",
+      "msg": "Filter OK: Supplier filter by status (22 results)",
+      "detail": null
+    },
+    {
+      "result": "PASS",
+      "id": "FILTER-003",
+      "msg": "Filter OK: Product search by prefix (291 results)",
+      "detail": null
+    },
+    {
+      "result": "PASS",
+      "id": "FILTER-004",
+      "msg": "Filter OK: PO filter by supplier_id (2 results)",
+      "detail": null
+    },
+    {
+      "result": "PASS",
+      "id": "FILTER-005",
+      "msg": "Filter OK: Inventory by warehouse (13 results)",
+      "detail": null
+    },
+    {
+      "result": "WARN",
+      "id": "FILTER-006",
+      "msg": "Filter not available or failed: Movements by date (404)",
+      "detail": ""
+    },
+    {
+      "result": "WARN",
+      "id": "FILTER-007",
+      "msg": "Filter not available or failed: Sales orders by customer (404)",
+      "detail": ""
+    },
+    {
+      "result": "PASS",
+      "id": "FILTER-008",
+      "msg": "Filter OK: Customer search by prefix (9 results)",
+      "detail": null
+    },
+    {
+      "result": "PASS",
+      "id": "DB-001",
+      "msg": "Test supplier persists in DB (ID=36)",
+      "detail": null
+    },
+    {
+      "result": "PASS",
+      "id": "DB-002",
+      "msg": "Test PO persists in DB (ID=75)",
+      "detail": null
+    },
+    {
+      "result": "FAIL",
+      "severity": "HIGH",
+      "id": "DB-003",
+      "msg": "Warehouse \"المخزن التشغيلي - الزقازيق\" (ID=3) has NEGATIVE stock_value: -2235.6925 EGP",
+      "detail": "",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "result": "FAIL",
+      "severity": "HIGH",
+      "id": "DB-003",
+      "msg": "Warehouse \"المخزن التشغيلي - فطير زمان\" (ID=7) has NEGATIVE stock_value: -3432.751 EGP",
+      "detail": "",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "result": "PASS",
+      "id": "DB-004",
+      "msg": "Test ingredient final stock: 20 KG (non-negative)",
+      "detail": null
+    }
+  ]
+}

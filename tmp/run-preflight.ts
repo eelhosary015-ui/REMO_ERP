@@ -1,0 +1,12 @@
+process.env.DATABASE_URL = "postgres://postgres:Aa017217*@127.0.0.1:5432/erp_system2";
+const { preflightPeriod } = await import("../modules/accounts/services/period-closing.service.js");
+const report = await preflightPeriod(10);
+console.log("can_close:", report.can_close);
+console.log("\n=== أخطاء ===");
+console.log(report.errors.length ? report.errors.map(e => `• ${e.message}`).join("\n") : "(لا يوجد)");
+console.log("\n=== تحذيرات ===");
+console.log(report.warnings.length ? report.warnings.map(w => `• ${w.message}`).join("\n") : "(لا يوجد)");
+console.log("\n=== مطابقات ===");
+for (const r of report.reconciliations) console.log(`  ${r.label}: GL=${r.gl} | فرعي=${r.subledger} | فرق=${r.difference}`);
+console.log("\n=== ميزان ===", report.counts.trial_debit, "/", report.counts.trial_credit);
+process.exit(0);

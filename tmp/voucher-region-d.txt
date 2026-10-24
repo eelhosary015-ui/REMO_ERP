@@ -1,0 +1,150 @@
+              {/* ── Row 3: payment method + adjustments ── */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <div className="space-y-1.5">
+                  <label className="flex items-center gap-1.5 text-[11px] font-black text-slate-500">
+                    <CreditCard className="w-3.5 h-3.5" />
+                    طريقة الدفع / التحصيل
+                  </label>
+                  <div className="grid grid-cols-2 gap-1.5">
+                    {([
+                      { key: "cash", label: "نقداً كاش", icon: Banknote },
+                      { key: "bank", label: "تحويل بنكي", icon: Landmark },
+                      { key: "check", label: "شيك", icon: FileCheck2 },
+                      { key: "electronic", label: "شبكة / مدى", icon: CreditCard },
+                    ] as const).map((method) => {
+                      const MethodIcon = method.icon;
+                      const active = voucherForm.payment_method === method.key;
+                      return (
+                        <button
+                          key={method.key}
+                          type="button"
+                          onClick={() => setVoucherForm(prev => ({ ...prev, payment_method: method.key }))}
+                          className={`flex items-center justify-center gap-1.5 rounded-xl border px-2 py-2.5 text-[11px] font-black transition-all ${
+                            active
+                              ? `${voucherAccent.chip} border`
+                              : "border-slate-200 bg-white text-slate-500 hover:border-slate-300 hover:text-slate-800"
+                          }`}
+                        >
+                          <MethodIcon className="w-4 h-4" />
+                          {method.label}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="space-y-1.5">
+                    <label className="block text-[11px] font-black text-slate-500">ضريبة مضافة</label>
+                    <div className="relative">
+                      <input
+                        type="number"
+                        step="any"
+                        min="0"
+                        value={voucherForm.tax_amount}
+                        onChange={(e) => setVoucherForm(prev => ({ ...prev, tax_amount: e.target.value }))}
+                        className={`w-full bg-slate-50 border border-slate-200 rounded-xl pl-11 pr-3 py-3 text-sm font-black tabular-nums text-slate-900 outline-none transition-all focus:bg-white focus:ring-4 ${voucherAccent.ring}`}
+                      />
+                      <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[10px] font-bold text-slate-400">ج.م</span>
+                    </div>
+                  </div>
+                  <div className="space-y-1.5">
+                    <label className="block text-[11px] font-black text-slate-500">خصم</label>
+                    <div className="relative">
+                      <input
+                        type="number"
+                        step="any"
+                        min="0"
+                        value={voucherForm.discount_amount}
+                        onChange={(e) => setVoucherForm(prev => ({ ...prev, discount_amount: e.target.value }))}
+                        className={`w-full bg-slate-50 border border-slate-200 rounded-xl pl-11 pr-3 py-3 text-sm font-black tabular-nums text-slate-900 outline-none transition-all focus:bg-white focus:ring-4 ${voucherAccent.ring}`}
+                      />
+                      <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[10px] font-bold text-slate-400">ج.م</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* ── Row 4: description ── */}
+              <div className="space-y-1.5">
+                <div className="flex items-center justify-between gap-3">
+                  <label className="flex items-center gap-1.5 text-[11px] font-black text-slate-500">
+                    <FileText className="w-3.5 h-3.5" />
+                    البيان / الوصف التفصيلي <span className="text-rose-500">*</span>
+                  </label>
+                  <span className="text-[10px] font-bold tabular-nums text-slate-400">{voucherForm.notes.length}/250</span>
+                </div>
+                <textarea
+                  value={voucherForm.notes}
+                  onChange={(e) => setVoucherForm(prev => ({ ...prev, notes: e.target.value }))}
+                  placeholder="اكتب بيان السند المالي — مثال: سداد دفعة من مستحقات المورد عن فاتورة مشتريات رقم ..."
+                  rows={3}
+                  maxLength={250}
+                  className={`w-full resize-y bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-medium leading-6 text-slate-800 outline-none transition-all placeholder:text-slate-400 focus:bg-white focus:ring-4 ${voucherAccent.ring}`}
+                  required
+                />
+                <div className="flex flex-wrap items-center gap-1.5">
+                  {[
+                    { label: "تحصيل دفعة", text: "تحصيل دفعة نقدية من العميل" },
+                    { label: "سداد مورد", text: "سداد مستحقات المورد" },
+                    { label: "مصروف تشغيلي", text: "مصروف تشغيلي" },
+                    { label: "عهدة", text: "صرف عهدة نقدية" },
+                  ].map((template) => (
+                    <button
+                      key={template.label}
+                      type="button"
+                      onClick={() => setVoucherForm(prev => ({ ...prev, notes: template.text }))}
+                      className="rounded-lg border border-dashed border-slate-300 px-2 py-1 text-[10px] font-bold text-slate-500 hover:border-slate-400 hover:text-slate-700 transition-colors"
+                    >
+                      {template.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* ── Footer actions ── */}
+            <div className="px-6 py-4 bg-slate-50/80 border-t border-slate-200 flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-3">
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => setShowNewVoucherModal(false)}
+                  disabled={isSavingVoucher}
+                  className="rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-[11px] font-black text-slate-600 hover:bg-slate-100 transition-colors disabled:opacity-50"
+                >
+                  إلغاء
+                </button>
+                <button
+                  type="button"
+                  disabled
+                  title="الطباعة متاحة بعد حفظ السند وظهوره في السجل"
+                  className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-[11px] font-black text-slate-400 opacity-60 cursor-not-allowed"
+                >
+                  <Printer className="w-3.5 h-3.5" />
+                  طباعة السند
+                </button>
+                <button
+                  type="button"
+                  onClick={saveVoucherDraft}
+                  disabled={isSavingVoucher}
+                  className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-[11px] font-black text-slate-600 hover:bg-slate-100 transition-colors disabled:opacity-50"
+                >
+                  <Save className="w-3.5 h-3.5" />
+                  حفظ كمسودة
+                </button>
+              </div>
+
+              <div className="flex items-center gap-3 justify-end">
+                {draftNotice && (
+                  <span className="text-[10px] font-bold text-emerald-700">{draftNotice}</span>
+                )}
+                <button
+                  type="submit"
+                  disabled={isSavingVoucher}
+                  className={`inline-flex items-center gap-2 rounded-xl px-6 py-3 text-xs font-black text-white shadow-lg transition-all active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed ${voucherAccent.solid}`}
+                >
+                  {isSavingVoucher ? <Loader2 className="w-4 h-4 animate-spin" /> : <CheckCircle2 className="w-4 h-4" />}
+                  {isSavingVoucher ? "جارٍ حفظ وإصدار السند..." : "حفظ وإصدار السند الآن"}
+                </button>
+              </div>
+            </div>

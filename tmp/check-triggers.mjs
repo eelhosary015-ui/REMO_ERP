@@ -1,0 +1,10 @@
+﻿import pg from "pg";
+const c = new pg.Client({ connectionString: "postgres://postgres:Aa017217*@127.0.0.1:5432/erp_system2" });
+await c.connect();
+const r = await c.query("SELECT tgname FROM pg_trigger WHERE tgrelid='journal_entries'::regclass AND NOT tgisinternal");
+console.log("triggers on journal_entries:", r.rows.map(x=>x.tgname).join(", ") || "(none)");
+const r2 = await c.query("SELECT tgname FROM pg_trigger WHERE tgrelid='journal_items'::regclass AND NOT tgisinternal");
+console.log("triggers on journal_items:", r2.rows.map(x=>x.tgname).join(", ") || "(none)");
+const ev = await c.query("SELECT count(*)::int n FROM financial_period_events");
+console.log("financial_period_events rows:", ev.rows[0].n);
+await c.end();

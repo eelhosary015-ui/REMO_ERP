@@ -1,0 +1,11 @@
+﻿import pg from "pg";
+import { config } from "dotenv";
+config({quiet:true});
+const c = new pg.Client({connectionString: process.env.DATABASE_URL});
+await c.connect();
+const q = async (s) => (await c.query(s)).rows;
+console.log("PROD oct2026:", await q("select id,month,year,status,to_char(end_date,'YYYY-MM-DD') ed, closed_at from financial_periods where year=2026 and month=10"));
+console.log("PROD null periods:", await q("select count(*)::int n from journal_entries where period_id is null"));
+console.log("PROD events table:", await q("select to_regclass('public.financial_period_events') t"));
+console.log("PROD triggers:", await q("select tgname from pg_trigger where tgname like '%period_guard%'"));
+await c.end();
